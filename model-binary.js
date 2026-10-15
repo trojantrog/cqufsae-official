@@ -6,12 +6,13 @@ export async function fetchModelBinary(input) {
   manifestURL.pathname += '.pack.json';
   const controller = new AbortController();
   const signal = controller.signal;
-  async function checkedFetch(url) {
+  async function checkedFetch(url, consume) {
     for (let attempt = 0; ; attempt++) {
       try {
         const response = await fetch(url, {signal});
         if (!response.ok) throw new Error(`Geometry transfer ${response.status}`);
-        return response;
+        // fetch resolves at the headers; retry body reads and decoding as well.
+        return await consume(response);
       } catch (error) {
         if (signal.aborted || attempt >= 2) throw error;
         await new Promise(resolve => setTimeout(resolve, 350 * (attempt + 1)));
@@ -19,7 +20,7 @@ export async function fetchModelBinary(input) {
     }
   }
   try {
-    const manifest = await (await checkedFetch(manifestURL)).json();
+    const manifest = await checkedFetch(manifestURL, response => response.json());
     if (manifest.version !== 1 || manifest.encoding !== 'gzip-byteplanes4' ||
         !Number.isSafeInteger(manifest.byteLength) || manifest.byteLength <= 0 ||
         manifest.byteLength > 1024 ** 3 || !Array.isArray(manifest.chunks)) {
@@ -38,15 +39,17 @@ export async function fetchModelBinary(input) {
     async function worker() {
       while (next < manifest.chunks.length) {
         const chunk = manifest.chunks[next++];
-        const response = await checkedFetch(new URL(chunk.file, manifestURL));
-        let planes;
-        if (typeof DecompressionStream === 'function') {
-          planes = new Uint8Array(await new Response(response.body.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer());
-        } else {
-          const {gunzipSync} = await import('./vendor/fflate.module.js');
-          planes = gunzipSync(new Uint8Array(await response.arrayBuffer()));
-        }
-        if (planes.byteLength !== chunk.byteLength) throw new Error('Geometry chunk size');
+        const planes = await checkedFetch(new URL(chunk.file, manifestURL), async response => {
+          let decoded;
+          if (typeof DecompressionStream === 'function') {
+            decoded = new Uint8Array(await new Response(response.body.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer());
+          } else {
+            const {gunzipSync} = await import('./vendor/fflate.module.js');
+            decoded = gunzipSync(new Uint8Array(await response.arrayBuffer()));
+          }
+          if (decoded.byteLength !== chunk.byteLength) throw new Error('Geometry chunk size');
+          return decoded;
+        });
         const count = planes.byteLength / 4;
         for (let plane = 0; plane < 4; plane++) {
           const start = plane * count;
