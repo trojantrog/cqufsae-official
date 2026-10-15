@@ -1,5 +1,6 @@
-import {fetchModelBinary} from './model-binary.js?v=748-public-1';
+import {fetchModelBinary} from './model-binary.js?v=749';
 import * as T from './vendor/three.module.min.js';
+import {modelArray} from './model-geometry.js?v=749';
 
 // Only the renderer borrows these index buffers. Native positions, normals,
 // kinematic registration, picking and framing always retain the source mesh.
@@ -22,8 +23,9 @@ export function createContextGeometry({enabled=true,maxPixelError=.75}={}){
    if(excludedIds.has(part.id))continue;
    const mesh=byId.get(part.id),source=mesh?.geometry;
    if(!source||source.attributes.position.count!==part.originalVertices||source.index?.count!==part.originalIndices)throw new Error('Context geometry source mismatch');
-   if(!Number.isInteger(part.byteOffset)||part.byteOffset<0||part.byteOffset%4||!Number.isInteger(part.indices)||part.indices<3||part.indices%3||part.byteLength!==part.indices*4||part.byteOffset+part.byteLength>buffer.byteLength||!Number.isFinite(part.errorMetres)||part.errorMetres<0||part.errorMetres>.000301)throw new Error('Context geometry bounds');
-   const index=new Uint32Array(buffer,part.byteOffset,part.indices);
+   const indexBytes=part.componentType===5123?2:4;
+   if(!Number.isInteger(part.byteOffset)||part.byteOffset<0||part.byteOffset%4||!Number.isInteger(part.indices)||part.indices<3||part.indices%3||part.byteLength!==part.indices*indexBytes||part.byteOffset+part.byteLength>buffer.byteLength||!Number.isFinite(part.errorMetres)||part.errorMetres<0||part.errorMetres>.000301)throw new Error('Context geometry bounds');
+   const index=modelArray(buffer,{byteOffset:part.byteOffset,count:part.indices,itemSize:1,componentType:part.componentType??5125},5125);
    for(const value of index)if(value>=part.originalVertices)throw new Error('Context geometry index');
    const geometry=new T.BufferGeometry();for(const [name,attribute]of Object.entries(source.attributes))geometry.setAttribute(name,attribute);
    geometry.setIndex(new T.BufferAttribute(index,1));geometry.boundingBox=source.boundingBox?.clone()||null;geometry.boundingSphere=source.boundingSphere?.clone()||null;
@@ -34,7 +36,7 @@ export function createContextGeometry({enabled=true,maxPixelError=.75}={}){
  async function load(meshes,{metadataBuffer,buffer,excludedIds=new Set()}){
   clear();const current=epoch;status='loading';
   try{
-   const url=new URL('./assets/exploded/c41-context-737.json',import.meta.url),response=await fetch(url);if(!response.ok)throw new Error('Context metadata load');const manifest=await response.json();
+   const url=new URL('./assets/exploded/c41-context-749.json',import.meta.url),response=await fetch(url);if(!response.ok)throw new Error('Context metadata load');const manifest=await response.json();
    if(!/^c41-context-\d+\.bin$/.test(manifest.binary))throw new Error('Context geometry path');
    const [metadataHash,binaryHash,derived]=await Promise.all([digest(metadataBuffer),digest(buffer),fetchModelBinary(new URL(manifest.binary,url))]);
    if(metadataHash!==manifest.sourceHashes.metadata||binaryHash!==manifest.sourceHashes.binary||await digest(derived)!==manifest.binarySHA256)throw new Error('Context geometry hash');

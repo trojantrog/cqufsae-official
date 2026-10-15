@@ -1,16 +1,17 @@
-import {fetchModelBinary} from './model-binary.js?v=748-public-1';
+import {fetchModelBinary} from './model-binary.js?v=749';
 import * as THREE from 'three';
 import { OrbitControls } from './vendor/OrbitControls.js';
 import { createStudioLighting } from './studio-lighting.js?v=742';
 import { createDepartmentDirector } from './department-work.js?v=748';
 import { vehicleMaterial } from './presentation-materials.js?v=742';
 import { detailElectricPart } from './electric-details.js?v=746';
-import { createEngineSourceParts } from './engine-native-source.js?v=746';
+import { createEngineSourceParts } from './engine-native-source.js?v=749';
+import { createModelGeometry } from './model-geometry.js?v=749';
 import { sampleGeometry,visiblePoints,fitPoints } from './camera-framing.js?v=742';
 import { explosionLayout } from './explosion-layout.js?v=747';
 import { createSystemFocus } from './system-focus.js?v=748';
 import { createRenderTelemetry } from './render-telemetry.js?v=742';
-import { createContextGeometry } from './context-geometry.js?v=748-public-1';
+import { createContextGeometry } from './context-geometry.js?v=749';
 import { createWorkLabels } from './work-labels.js?v=742';
 import { createSectionCulling } from './section-culling.js?v=742';
 import { prepareShowcase, createShowcase } from './showcase.js?v=743';
@@ -72,7 +73,7 @@ if(presentation)departments.all.copy='向下滚动，查看赛车的组成。选
 const assets=new Map();
 
 function init(){
-  stage.dataset.build='748';
+  stage.dataset.build='749';
   renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:'high-performance'});
   renderer.setPixelRatio(Math.min(devicePixelRatio,2));
   renderer.localClippingEnabled=true;
@@ -140,8 +141,9 @@ const material=vehicleMaterial;
 
 async function readModel(id){
   if(assets.has(id))return assets.get(id);
-  const assetVersion=id==='a08-context'?'746':id==='c41-engine-update'?'745':id==='dc26-powertrain'?'744':id==='a08-systems'?'743':'742';
-  const metaResponse=await fetch(`assets/exploded/${id}.json?v=${assetVersion}`);if(!metaResponse.ok)throw new Error('metadata');
+  const assetVersion='749';
+  const metadataName=['c41','c41-engine-update','dc26-powertrain','a08-systems','a08-context'].includes(id)?`${id}-optimized-749`:id;
+  const metaResponse=await fetch(`assets/exploded/${metadataName}.json?v=${assetVersion}`);if(!metaResponse.ok)throw new Error('metadata');
   const metadataBuffer=await metaResponse.arrayBuffer(),meta=JSON.parse(new TextDecoder().decode(metadataBuffer));
   const buffer=await fetchModelBinary(`assets/exploded/${meta.binary}?v=${assetVersion}`);const model={meta,buffer,metadataBuffer};assets.set(id,model);return model;
 }
@@ -160,12 +162,7 @@ async function loadCar(id,navToken=null){
     vehicleRoot=new THREE.Group();meshes=[];
     for(const data of meta.objects){
       if(replacedIds.has(data.id))continue;
-      let geometry=new THREE.BufferGeometry();
-      const positions=new Float32Array(buffer,data.position.byteOffset,data.position.count*3);
-      const indices=new Uint32Array(buffer,data.index.byteOffset,data.index.count);
-      geometry.setAttribute('position',new THREE.BufferAttribute(positions,3));geometry.setIndex(new THREE.BufferAttribute(indices,1));
-      if(data.normal){geometry.setAttribute('normal',new THREE.BufferAttribute(new Float32Array(buffer,data.normal.byteOffset,data.normal.count*3),3));}else geometry.computeVertexNormals();
-      geometry.computeBoundingSphere();geometry.computeBoundingBox();
+      const geometry=createModelGeometry(data,buffer),positions=geometry.attributes.position.array;
       const mat=material(data),mesh=new THREE.Mesh(geometry,mat);
       mesh.castShadow=true;mesh.receiveShadow=true;
       mesh.userData={...data,baseColor:mat.color.clone(),contextColor:mat.color.clone().lerp(new THREE.Color('#85877f'),.58),baseMetal:mat.metalness,baseRoughness:mat.roughness,explode:new THREE.Vector3(...data.explode),assemblyOffset:new THREE.Vector3(...data.assemblyOffset||data.explode),detailOffset:new THREE.Vector3(...data.detailOffset||[0,0,0]),selected:false};
@@ -202,11 +199,7 @@ async function loadElectricParts(){
         const data={...source,variant:'e74'},key=[data.position.byteOffset,data.position.count,data.normal?.byteOffset,data.index.byteOffset,data.index.count].join('/');
         let geometry=geometries.get(key);
         if(!geometry){
-          geometry=new THREE.BufferGeometry();
-          geometry.setAttribute('position',new THREE.BufferAttribute(new Float32Array(buffer,data.position.byteOffset,data.position.count*3),3));
-          geometry.setIndex(new THREE.BufferAttribute(new Uint32Array(buffer,data.index.byteOffset,data.index.count),1));
-          if(data.normal)geometry.setAttribute('normal',new THREE.BufferAttribute(new Float32Array(buffer,data.normal.byteOffset,data.normal.count*3),3));else geometry.computeVertexNormals();
-          geometry.computeBoundingBox();geometry.computeBoundingSphere();geometries.set(key,geometry);
+          geometry=createModelGeometry(data,buffer);geometries.set(key,geometry);
         }
         const mat=material(data),mesh=new THREE.Mesh(geometry,mat),rest=new THREE.Matrix4();
         if(data.installationMatrix)rest.fromArray(data.installationMatrix);
@@ -227,11 +220,7 @@ async function loadAutonomousParts(){
     const models=await Promise.all([readModel('a08-systems'),readModel('a08-context')]),parts=[];
     for(const {meta,buffer} of models)for(const source of meta.objects){
       const data={...source,id:source.id.startsWith('a08-')?source.id:'a08-'+source.id,variant:'a08'};
-      const geometry=new THREE.BufferGeometry();
-      geometry.setAttribute('position',new THREE.BufferAttribute(new Float32Array(buffer,data.position.byteOffset,data.position.count*3),3));
-      geometry.setIndex(new THREE.BufferAttribute(new Uint32Array(buffer,data.index.byteOffset,data.index.count),1));
-      if(data.normal)geometry.setAttribute('normal',new THREE.BufferAttribute(new Float32Array(buffer,data.normal.byteOffset,data.normal.count*3),3));else geometry.computeVertexNormals();
-      geometry.computeBoundingBox();geometry.computeBoundingSphere();
+      const geometry=createModelGeometry(data,buffer);
       const mat=material(data),mesh=new THREE.Mesh(geometry,mat);
       mesh.castShadow=true;mesh.receiveShadow=true;
       mesh.userData={...data,baseColor:mat.color.clone(),framingPoints:sampleGeometry(geometry)};

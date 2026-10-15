@@ -2,6 +2,7 @@ import * as T from './vendor/three.module.min.js';
 import {vehicleMaterial} from './presentation-materials.js?v=742';
 import {sampleGeometry} from './camera-framing.js?v=742';
 import {explosionLayout} from './explosion-layout.js?v=742';
+import {createModelGeometry} from './model-geometry.js?v=749';
 
 // The source buffers remain in native part coordinates. Installation is a
 // rigid matrix, shared by the operating pose, exploded view and focus camera.
@@ -14,11 +15,7 @@ export function createEngineSourceParts(meta,buffer){
    const key=[data.position.byteOffset,data.position.count,data.normal?.byteOffset,data.index.byteOffset,data.index.count].join('/');
    let geometry=geometries.get(key);
    if(!geometry){
-    geometry=new T.BufferGeometry();
-    geometry.setAttribute('position',new T.BufferAttribute(new Float32Array(buffer,data.position.byteOffset,data.position.count*3),3));
-    geometry.setIndex(new T.BufferAttribute(new Uint32Array(buffer,data.index.byteOffset,data.index.count),1));
-    if(data.normal)geometry.setAttribute('normal',new T.BufferAttribute(new Float32Array(buffer,data.normal.byteOffset,data.normal.count*3),3));else geometry.computeVertexNormals();
-    geometry.computeBoundingBox();geometry.computeBoundingSphere();geometries.set(key,geometry);
+    geometry=createModelGeometry(data,buffer);geometries.set(key,geometry);
    }
    const rest=new T.Matrix4().fromArray(data.installationMatrix),material=vehicleMaterial(data),mesh=new T.Mesh(geometry,material);
    if(data.cadColor&&data.cadColor.toLowerCase()!=='#ffffff')material.color.set(data.cadColor);

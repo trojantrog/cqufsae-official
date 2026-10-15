@@ -21,14 +21,14 @@ export async function fetchModelBinary(input) {
   }
   try {
     const manifest = await checkedFetch(manifestURL, response => response.json());
-    if (manifest.version !== 1 || manifest.encoding !== 'gzip-byteplanes4' ||
+    if (!((manifest.version === 1 && manifest.encoding === 'gzip-byteplanes4') || (manifest.version === 2 && manifest.encoding === 'gzip-byteplanes4-delta32')) ||
         !Number.isSafeInteger(manifest.byteLength) || manifest.byteLength <= 0 ||
         manifest.byteLength > 1024 ** 3 || !Array.isArray(manifest.chunks)) {
       throw new Error('Geometry manifest format');
     }
     let end = 0;
     for (const chunk of manifest.chunks) {
-      if (chunk.offset !== end || !Number.isSafeInteger(chunk.byteLength) ||
+      if (![0,1,3].includes(chunk.deltaStride ?? 0) || (manifest.version === 1 && chunk.deltaStride) || chunk.offset !== end || !Number.isSafeInteger(chunk.byteLength) ||
           chunk.byteLength <= 0 || chunk.byteLength % 4 ||
           !/^packed\/[a-z0-9.-]+\.dat$/.test(chunk.file)) throw new Error('Geometry chunk bounds');
       end += chunk.byteLength;
@@ -56,6 +56,10 @@ export async function fetchModelBinary(input) {
           for (let i = 0, target = chunk.offset + plane; i < count; i++, target += 4) {
             output[target] = planes[start + i];
           }
+        }
+        if (chunk.deltaStride) {
+          const words = new Uint32Array(output.buffer, chunk.offset, count);
+          for (let i = chunk.deltaStride; i < words.length; i++) words[i] = (words[i] + words[i - chunk.deltaStride]) >>> 0;
         }
       }
     }
