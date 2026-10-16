@@ -1,0 +1,2208 @@
+{
+  "fps": 60,
+  "width": 1920,
+  "height": 1080,
+  "overview": {
+    "src": "video-360a2224f799583a1276c986f5248a719a9b8c5e9b0b66138ae5732f25031dc2.mp4",
+    "frames": 720,
+    "bytes": 26855355,
+    "sha256": "360a2224f799583a1276c986f5248a719a9b8c5e9b0b66138ae5732f25031dc2",
+    "poster": "anchor.png",
+    "axis": "scrollPhase",
+    "explosionRange": [
+      0.1,
+      0.88
+    ],
+    "resident": true
+  },
+  "systems": {
+    "chassis": {
+      "enter": {
+        "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-f318fe62bd6fcad3f34864062c826d0865df8e598afa2533f320268da23fd711.mp4",
+        "frames": 175,
+        "bytes": 6912217,
+        "sha256": "f318fe62bd6fcad3f34864062c826d0865df8e598afa2533f320268da23fd711",
+        "resident": false
+      },
+      "loop": {
+        "src": "video-a140451294458644002ed28033378d473362bbf184172e7d22648e63356f69be.mp4",
+        "frames": 720,
+        "bytes": 11918615,
+        "sha256": "a140451294458644002ed28033378d473362bbf184172e7d22648e63356f69be",
+        "resident": true
+      },
+      "exits": [
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-7dbcdbe3e1dbffa955a2ccae30ea17892b816c9cc4876663c616d192c2d66e36.mp4",
+          "frames": 175,
+          "bytes": 6734522,
+          "sha256": "7dbcdbe3e1dbffa955a2ccae30ea17892b816c9cc4876663c616d192c2d66e36",
+          "phaseFrame": 0,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-474b3d0c5ab64d6b1b94bf38082947189d1f727c66032dffd861838bbc898d09.mp4",
+          "frames": 175,
+          "bytes": 5845541,
+          "sha256": "474b3d0c5ab64d6b1b94bf38082947189d1f727c66032dffd861838bbc898d09",
+          "phaseFrame": 60,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-e942d45e6fae736694ca833a3b22cbe17ab2def4330509e84f9b69c73933052a.mp4",
+          "frames": 175,
+          "bytes": 5939725,
+          "sha256": "e942d45e6fae736694ca833a3b22cbe17ab2def4330509e84f9b69c73933052a",
+          "phaseFrame": 120,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-b83332570bc50fbf87eb1ef6642e7c6091fa9b271d507ba4238e1f27603d5f20.mp4",
+          "frames": 175,
+          "bytes": 5709354,
+          "sha256": "b83332570bc50fbf87eb1ef6642e7c6091fa9b271d507ba4238e1f27603d5f20",
+          "phaseFrame": 180,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-421dff7d69fe0f4c70ccd9da08379098a1e6f15b0e5021019558d17fe7411c2f.mp4",
+          "frames": 175,
+          "bytes": 5723532,
+          "sha256": "421dff7d69fe0f4c70ccd9da08379098a1e6f15b0e5021019558d17fe7411c2f",
+          "phaseFrame": 240,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-d2cdf853c398f67b63586e2ccfac9e0f6737962935baf41e9666b420f857fd37.mp4",
+          "frames": 175,
+          "bytes": 6180051,
+          "sha256": "d2cdf853c398f67b63586e2ccfac9e0f6737962935baf41e9666b420f857fd37",
+          "phaseFrame": 300,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-84f0e5f6bbd22de1dfd702eaa063693fa3402e063318fbc4b64f0c5d1979da29.mp4",
+          "frames": 175,
+          "bytes": 5964602,
+          "sha256": "84f0e5f6bbd22de1dfd702eaa063693fa3402e063318fbc4b64f0c5d1979da29",
+          "phaseFrame": 360,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-ed224f4ca1dc6ae1d2d7e198e4ac6f7e66199cc1513cd5a67da13d1669d5a8b4.mp4",
+          "frames": 175,
+          "bytes": 5938243,
+          "sha256": "ed224f4ca1dc6ae1d2d7e198e4ac6f7e66199cc1513cd5a67da13d1669d5a8b4",
+          "phaseFrame": 420,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-84a8317e237dd56a2709f3209362e834eb3825f47c295f691060f6093850d07e.mp4",
+          "frames": 175,
+          "bytes": 5941504,
+          "sha256": "84a8317e237dd56a2709f3209362e834eb3825f47c295f691060f6093850d07e",
+          "phaseFrame": 480,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-773ed20ab6319dce63b0d4152804066cb4c0bbe4aec0f1435fd0b50493c18f4b.mp4",
+          "frames": 175,
+          "bytes": 5947393,
+          "sha256": "773ed20ab6319dce63b0d4152804066cb4c0bbe4aec0f1435fd0b50493c18f4b",
+          "phaseFrame": 540,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-6dbd62c03168861f077feddb75da86a78efd012c4c018339effa067a8c3c6ec0.mp4",
+          "frames": 175,
+          "bytes": 5953429,
+          "sha256": "6dbd62c03168861f077feddb75da86a78efd012c4c018339effa067a8c3c6ec0",
+          "phaseFrame": 600,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-49e015e7f2a688e4f241c37c22e3b6b1af5853bdad4f4d9a8c732c4fccdd8cff.mp4",
+          "frames": 175,
+          "bytes": 6876838,
+          "sha256": "49e015e7f2a688e4f241c37c22e3b6b1af5853bdad4f4d9a8c732c4fccdd8cff",
+          "phaseFrame": 660,
+          "resident": false
+        }
+      ],
+      "telemetrySrc": "systems/chassis/telemetry.json"
+    },
+    "suspension": {
+      "enter": {
+        "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-71ddd87dadaf419c5871716631705e3876490586bc309b9f87e9958cb31130c9.mp4",
+        "frames": 175,
+        "bytes": 7652619,
+        "sha256": "71ddd87dadaf419c5871716631705e3876490586bc309b9f87e9958cb31130c9",
+        "resident": false
+      },
+      "loop": {
+        "src": "video-700049953035853acee970bf34eb5447772fe0265bea3a2ec7a0adfacf7bf9a3.mp4",
+        "frames": 720,
+        "bytes": 21648150,
+        "sha256": "700049953035853acee970bf34eb5447772fe0265bea3a2ec7a0adfacf7bf9a3",
+        "resident": true
+      },
+      "exits": [
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-d18a2ec4bc339242b7a7756f3fd75a71fe9cdae4150da6f1b244568601a7ec05.mp4",
+          "frames": 175,
+          "bytes": 7303796,
+          "sha256": "d18a2ec4bc339242b7a7756f3fd75a71fe9cdae4150da6f1b244568601a7ec05",
+          "phaseFrame": 0,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-dab6e26acec8b0a418e08f979b968ff5474fd575531ecd70ed1654c0ebe1e0c0.mp4",
+          "frames": 175,
+          "bytes": 5992206,
+          "sha256": "dab6e26acec8b0a418e08f979b968ff5474fd575531ecd70ed1654c0ebe1e0c0",
+          "phaseFrame": 60,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-4c2b0ed57b3529ff6ce8d9b8cf67f92c7d17e3aabffaa0f74c29fe38d610642c.mp4",
+          "frames": 175,
+          "bytes": 6353535,
+          "sha256": "4c2b0ed57b3529ff6ce8d9b8cf67f92c7d17e3aabffaa0f74c29fe38d610642c",
+          "phaseFrame": 120,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-73d0eb0c9c3f02f43921a02527f59be464e518f0e2857ac43be7f617d3726a66.mp4",
+          "frames": 175,
+          "bytes": 6042449,
+          "sha256": "73d0eb0c9c3f02f43921a02527f59be464e518f0e2857ac43be7f617d3726a66",
+          "phaseFrame": 180,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-2317a8469a032b81dad3c027135fe38dce55af126d2d55247a014228abb00aca.mp4",
+          "frames": 175,
+          "bytes": 6060996,
+          "sha256": "2317a8469a032b81dad3c027135fe38dce55af126d2d55247a014228abb00aca",
+          "phaseFrame": 240,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-23217b76b81cdab514dd6f09b14f55ae2f4aaaae1f5e860f49cf1a7aaed830df.mp4",
+          "frames": 175,
+          "bytes": 6748948,
+          "sha256": "23217b76b81cdab514dd6f09b14f55ae2f4aaaae1f5e860f49cf1a7aaed830df",
+          "phaseFrame": 300,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-361bc904ce0e8b2a185f843103214d850eace1106dbce20f125f5c2dff59e0cb.mp4",
+          "frames": 175,
+          "bytes": 6388566,
+          "sha256": "361bc904ce0e8b2a185f843103214d850eace1106dbce20f125f5c2dff59e0cb",
+          "phaseFrame": 360,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-7d6d185c8ac95bad9057139dfbcfbfb3283a944da4c45e45d3a44fd6bfd81561.mp4",
+          "frames": 175,
+          "bytes": 6343933,
+          "sha256": "7d6d185c8ac95bad9057139dfbcfbfb3283a944da4c45e45d3a44fd6bfd81561",
+          "phaseFrame": 420,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-43d83c5eda5506809ccaf772d37743134e9d861368eac85b671864f52d6dd574.mp4",
+          "frames": 175,
+          "bytes": 6356710,
+          "sha256": "43d83c5eda5506809ccaf772d37743134e9d861368eac85b671864f52d6dd574",
+          "phaseFrame": 480,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-bca1f267f1162d639505016c3d831e4b661935f96dbf0271176ca966f1d571d8.mp4",
+          "frames": 175,
+          "bytes": 6370722,
+          "sha256": "bca1f267f1162d639505016c3d831e4b661935f96dbf0271176ca966f1d571d8",
+          "phaseFrame": 540,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-ddff2a7e1525f823afa149daa81b3da244b7d5ce008cc29033c9654d46721389.mp4",
+          "frames": 175,
+          "bytes": 6374748,
+          "sha256": "ddff2a7e1525f823afa149daa81b3da244b7d5ce008cc29033c9654d46721389",
+          "phaseFrame": 600,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-f1e42f9f4095ba2c7f8f648b7598323e887a88e5020197f390cf2aa24620f2e9.mp4",
+          "frames": 175,
+          "bytes": 7303105,
+          "sha256": "f1e42f9f4095ba2c7f8f648b7598323e887a88e5020197f390cf2aa24620f2e9",
+          "phaseFrame": 660,
+          "resident": false
+        }
+      ],
+      "telemetrySrc": "systems/suspension/telemetry.json"
+    },
+    "steering": {
+      "enter": {
+        "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-d9f79711a197e2d471c49427087f271a94ca4b43e38949743cf5517b6dd84dc5.mp4",
+        "frames": 175,
+        "bytes": 7910572,
+        "sha256": "d9f79711a197e2d471c49427087f271a94ca4b43e38949743cf5517b6dd84dc5",
+        "resident": false
+      },
+      "loop": {
+        "src": "video-15c380f480fcf552823e7a5728bd6d74da6d53aeb8f7df7acab9cda23e44ac51.mp4",
+        "frames": 720,
+        "bytes": 3048397,
+        "sha256": "15c380f480fcf552823e7a5728bd6d74da6d53aeb8f7df7acab9cda23e44ac51",
+        "resident": true
+      },
+      "exits": [
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-ae1e19edfdc76a321f6ba46322b9598e329b1914eb914af486c39721221b85af.mp4",
+          "frames": 175,
+          "bytes": 7536412,
+          "sha256": "ae1e19edfdc76a321f6ba46322b9598e329b1914eb914af486c39721221b85af",
+          "phaseFrame": 0,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-0b0c1c201d59d37d44ffd63741efd774262a6ec698168f2cda5d9de76d05132d.mp4",
+          "frames": 175,
+          "bytes": 7338117,
+          "sha256": "0b0c1c201d59d37d44ffd63741efd774262a6ec698168f2cda5d9de76d05132d",
+          "phaseFrame": 60,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-1a81025e29fa0464922ed3472cbbbb731c9a0c31ac2c2edfb777c1b6560814a0.mp4",
+          "frames": 175,
+          "bytes": 7365752,
+          "sha256": "1a81025e29fa0464922ed3472cbbbb731c9a0c31ac2c2edfb777c1b6560814a0",
+          "phaseFrame": 120,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-4399f9e64d8a7e23f8a761d9a2db0a0228c3a927029bcd91f7115d980ca2ac2e.mp4",
+          "frames": 175,
+          "bytes": 7183463,
+          "sha256": "4399f9e64d8a7e23f8a761d9a2db0a0228c3a927029bcd91f7115d980ca2ac2e",
+          "phaseFrame": 180,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-201658e332cb35016282fa01843bf896fcd0fbdcef969e13c5d34859414d981e.mp4",
+          "frames": 175,
+          "bytes": 7277778,
+          "sha256": "201658e332cb35016282fa01843bf896fcd0fbdcef969e13c5d34859414d981e",
+          "phaseFrame": 240,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-86a5ab9b446c7e8e9b2dd4315d6ff802a1c90cac01a6e25fa4cd9d7a55af4dac.mp4",
+          "frames": 175,
+          "bytes": 7373005,
+          "sha256": "86a5ab9b446c7e8e9b2dd4315d6ff802a1c90cac01a6e25fa4cd9d7a55af4dac",
+          "phaseFrame": 300,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-a2956afeec51ec2b2ada9d726be36268c2ce4578760e890dcef734e51d64e62e.mp4",
+          "frames": 175,
+          "bytes": 7403806,
+          "sha256": "a2956afeec51ec2b2ada9d726be36268c2ce4578760e890dcef734e51d64e62e",
+          "phaseFrame": 360,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-59bda1fc692c89c9fc1509f976ff1577ddf38ed66c5def58d0d7bb78df1edcc3.mp4",
+          "frames": 175,
+          "bytes": 7370984,
+          "sha256": "59bda1fc692c89c9fc1509f976ff1577ddf38ed66c5def58d0d7bb78df1edcc3",
+          "phaseFrame": 420,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-d5ee5804bcf399c0e182d6f1836fcd6162ef6c86c558505aaf374a83659a09af.mp4",
+          "frames": 175,
+          "bytes": 7384976,
+          "sha256": "d5ee5804bcf399c0e182d6f1836fcd6162ef6c86c558505aaf374a83659a09af",
+          "phaseFrame": 480,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-bfb0d8ad41e3e061487e9a927cacc3c0998d5bfd34fecdad5c54003c31984d42.mp4",
+          "frames": 175,
+          "bytes": 7383453,
+          "sha256": "bfb0d8ad41e3e061487e9a927cacc3c0998d5bfd34fecdad5c54003c31984d42",
+          "phaseFrame": 540,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-32d130d7acfc572e90d55d227f72c125744cc9c3771c6411588cc37dd975ec6d.mp4",
+          "frames": 175,
+          "bytes": 7389111,
+          "sha256": "32d130d7acfc572e90d55d227f72c125744cc9c3771c6411588cc37dd975ec6d",
+          "phaseFrame": 600,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-ef5a02949b05f75d7fd5904ee9007766a8f4f3554399c91f77cf1083c36aaca6.mp4",
+          "frames": 175,
+          "bytes": 7479263,
+          "sha256": "ef5a02949b05f75d7fd5904ee9007766a8f4f3554399c91f77cf1083c36aaca6",
+          "phaseFrame": 660,
+          "resident": false
+        }
+      ],
+      "telemetrySrc": "systems/steering/telemetry.json"
+    },
+    "brakes": {
+      "enter": {
+        "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-0050c11f05726cd345cc3318c2f32b6ef18d6112ed10de5f07b9966536b67387.mp4",
+        "frames": 175,
+        "bytes": 6904991,
+        "sha256": "0050c11f05726cd345cc3318c2f32b6ef18d6112ed10de5f07b9966536b67387",
+        "resident": false
+      },
+      "loop": {
+        "src": "video-5491180851bdcb8e6f3dbb33f748cf3bacea03026d019f6252ffefc6de3e739b.mp4",
+        "frames": 720,
+        "bytes": 7718529,
+        "sha256": "5491180851bdcb8e6f3dbb33f748cf3bacea03026d019f6252ffefc6de3e739b",
+        "resident": true
+      },
+      "exits": [
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-f30c73f32f32ee696748e5b64ba6c611d044e848623ba6dc02d1b148b7951705.mp4",
+          "frames": 175,
+          "bytes": 6551743,
+          "sha256": "f30c73f32f32ee696748e5b64ba6c611d044e848623ba6dc02d1b148b7951705",
+          "phaseFrame": 0,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-da34b12c5c1bf4a64da136f547705f722c5a5ebd07d076e018e8f3b841ee0a34.mp4",
+          "frames": 175,
+          "bytes": 5812874,
+          "sha256": "da34b12c5c1bf4a64da136f547705f722c5a5ebd07d076e018e8f3b841ee0a34",
+          "phaseFrame": 60,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-f994e64e5a706065ded1fa3abcac0ad03a6b2629f00a669e6f4ee64ef8d615b8.mp4",
+          "frames": 175,
+          "bytes": 5852919,
+          "sha256": "f994e64e5a706065ded1fa3abcac0ad03a6b2629f00a669e6f4ee64ef8d615b8",
+          "phaseFrame": 120,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-ed593506c1f00681517d1aa0946479a33ae59289a60d502e77b138b01574a412.mp4",
+          "frames": 175,
+          "bytes": 5719833,
+          "sha256": "ed593506c1f00681517d1aa0946479a33ae59289a60d502e77b138b01574a412",
+          "phaseFrame": 180,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-6695b9a936f98149758d7e572b0a19cffe3758b8ad580db53eba2de9866f12ab.mp4",
+          "frames": 175,
+          "bytes": 5761021,
+          "sha256": "6695b9a936f98149758d7e572b0a19cffe3758b8ad580db53eba2de9866f12ab",
+          "phaseFrame": 240,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-47abba5e64f65d84d2e4aaa20a1025b487e3c7deef72846fb9d6f799d5a7815f.mp4",
+          "frames": 175,
+          "bytes": 5881327,
+          "sha256": "47abba5e64f65d84d2e4aaa20a1025b487e3c7deef72846fb9d6f799d5a7815f",
+          "phaseFrame": 300,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-a4200d616b8157709293358bafd6aea7ac3f5fd8e62585119a9aa82e96e4b563.mp4",
+          "frames": 175,
+          "bytes": 5886361,
+          "sha256": "a4200d616b8157709293358bafd6aea7ac3f5fd8e62585119a9aa82e96e4b563",
+          "phaseFrame": 360,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-baf368fc1bce63c54a83f1d86fbec120344b333dd2e3b54a76b319da91f0c9ce.mp4",
+          "frames": 175,
+          "bytes": 5854463,
+          "sha256": "baf368fc1bce63c54a83f1d86fbec120344b333dd2e3b54a76b319da91f0c9ce",
+          "phaseFrame": 420,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-79c87b8e9c74b91ca8ba53d41b526a0a77e4379a3dfb8f59c262d9f937b5d5df.mp4",
+          "frames": 175,
+          "bytes": 5857291,
+          "sha256": "79c87b8e9c74b91ca8ba53d41b526a0a77e4379a3dfb8f59c262d9f937b5d5df",
+          "phaseFrame": 480,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-dfa9adea482164edb4f16d3374bc06795dc03c88be0f15d8892a40260b37ed77.mp4",
+          "frames": 175,
+          "bytes": 5860295,
+          "sha256": "dfa9adea482164edb4f16d3374bc06795dc03c88be0f15d8892a40260b37ed77",
+          "phaseFrame": 540,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-1e08b5948053919f1e377a3a4e85c7db0d326a2edb0285a8237d530b630b8822.mp4",
+          "frames": 175,
+          "bytes": 5866048,
+          "sha256": "1e08b5948053919f1e377a3a4e85c7db0d326a2edb0285a8237d530b630b8822",
+          "phaseFrame": 600,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-85b386326686882c15b35038d3177ab5516b74ec44fccb01c54b3d2e432c0d01.mp4",
+          "frames": 175,
+          "bytes": 6697955,
+          "sha256": "85b386326686882c15b35038d3177ab5516b74ec44fccb01c54b3d2e432c0d01",
+          "phaseFrame": 660,
+          "resident": false
+        }
+      ],
+      "telemetrySrc": "systems/brakes/telemetry.json"
+    },
+    "structure": {
+      "enter": {
+        "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-f1d24f866f036476412cd3ebf578a29092f81dce08242a7f0e5e4cf94c5f384b.mp4",
+        "frames": 175,
+        "bytes": 7638216,
+        "sha256": "f1d24f866f036476412cd3ebf578a29092f81dce08242a7f0e5e4cf94c5f384b",
+        "resident": false
+      },
+      "loop": {
+        "src": "video-6aab935d91effdeb0286119f1b59a0ca85314bac412da4c0ca0514745fc949a0.mp4",
+        "frames": 720,
+        "bytes": 21922359,
+        "sha256": "6aab935d91effdeb0286119f1b59a0ca85314bac412da4c0ca0514745fc949a0",
+        "resident": true
+      },
+      "exits": [
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-3f1e096950a177cace89aac2f694e71d71da6514da20d657283413bef1acf7b0.mp4",
+          "frames": 175,
+          "bytes": 6787975,
+          "sha256": "3f1e096950a177cace89aac2f694e71d71da6514da20d657283413bef1acf7b0",
+          "phaseFrame": 0,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-dc8fb84b5c38a2c7c74c18ff3613b6bab38b75d1e3fb0e91f4c1dc2c3e2bedfd.mp4",
+          "frames": 175,
+          "bytes": 5983951,
+          "sha256": "dc8fb84b5c38a2c7c74c18ff3613b6bab38b75d1e3fb0e91f4c1dc2c3e2bedfd",
+          "phaseFrame": 60,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-18c65761efe9bc21fa1fdb5e471ccc757315a727b24aa0d20ab648fbef590ff8.mp4",
+          "frames": 175,
+          "bytes": 6040622,
+          "sha256": "18c65761efe9bc21fa1fdb5e471ccc757315a727b24aa0d20ab648fbef590ff8",
+          "phaseFrame": 120,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-5ee0ee937ce250b381de15cf561b8bc0e223b7c7c4d4dd3e18209efd3a972c54.mp4",
+          "frames": 175,
+          "bytes": 5836503,
+          "sha256": "5ee0ee937ce250b381de15cf561b8bc0e223b7c7c4d4dd3e18209efd3a972c54",
+          "phaseFrame": 180,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-e33c060f620e12031889476d58853249b716d694da8bbb6981030a89cac111f8.mp4",
+          "frames": 175,
+          "bytes": 5857415,
+          "sha256": "e33c060f620e12031889476d58853249b716d694da8bbb6981030a89cac111f8",
+          "phaseFrame": 240,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-13f51cfdaf349fde605c0d69d4df06f93d837a6d2a1c2f1c14e7f3c3cab6ce68.mp4",
+          "frames": 175,
+          "bytes": 6324402,
+          "sha256": "13f51cfdaf349fde605c0d69d4df06f93d837a6d2a1c2f1c14e7f3c3cab6ce68",
+          "phaseFrame": 300,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-77bc66fcfa0307e3c37288311119f1cdc689a975e7a58a60653e707bc6b19ebe.mp4",
+          "frames": 175,
+          "bytes": 6089001,
+          "sha256": "77bc66fcfa0307e3c37288311119f1cdc689a975e7a58a60653e707bc6b19ebe",
+          "phaseFrame": 360,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-a4b540820cf0ec0f3b4f7dca66d6562a5aa81097efc34e7d09307bb999b0e4d2.mp4",
+          "frames": 175,
+          "bytes": 6027626,
+          "sha256": "a4b540820cf0ec0f3b4f7dca66d6562a5aa81097efc34e7d09307bb999b0e4d2",
+          "phaseFrame": 420,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-5ef6e4138cfbfe1348083e0aa654fb9d4a029aa29d6fde512a6f19b2b08cd2b6.mp4",
+          "frames": 175,
+          "bytes": 6032753,
+          "sha256": "5ef6e4138cfbfe1348083e0aa654fb9d4a029aa29d6fde512a6f19b2b08cd2b6",
+          "phaseFrame": 480,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-2cc9de75f818d86f0d5fe757d33ff3aa3882b1c1e91127a4ab1aa215697ae697.mp4",
+          "frames": 175,
+          "bytes": 6046807,
+          "sha256": "2cc9de75f818d86f0d5fe757d33ff3aa3882b1c1e91127a4ab1aa215697ae697",
+          "phaseFrame": 540,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-af105cf04180c5122404b2e74877f55496c20ec7f56e31ad65e57976833029b2.mp4",
+          "frames": 175,
+          "bytes": 6041992,
+          "sha256": "af105cf04180c5122404b2e74877f55496c20ec7f56e31ad65e57976833029b2",
+          "phaseFrame": 600,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-e31225b5de664b98e53d74e037eae870d0cf7f1d7c020e8323ddec1d8f4a0ec6.mp4",
+          "frames": 175,
+          "bytes": 6958003,
+          "sha256": "e31225b5de664b98e53d74e037eae870d0cf7f1d7c020e8323ddec1d8f4a0ec6",
+          "phaseFrame": 660,
+          "resident": false
+        }
+      ],
+      "telemetrySrc": "systems/structure/telemetry.json"
+    },
+    "body": {
+      "enter": {
+        "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-5090a73d5b0f8ae86e7cc1bec9356b3f044fa18661d08548b39794368f5b945d.mp4",
+        "frames": 175,
+        "bytes": 9671417,
+        "sha256": "5090a73d5b0f8ae86e7cc1bec9356b3f044fa18661d08548b39794368f5b945d",
+        "resident": false
+      },
+      "loop": {
+        "src": "video-6207746b129ed00c0d9a1ea6231f54cbce2f22e177e52a56a01ee949e3eb4050.mp4",
+        "frames": 720,
+        "bytes": 45249554,
+        "sha256": "6207746b129ed00c0d9a1ea6231f54cbce2f22e177e52a56a01ee949e3eb4050",
+        "resident": true
+      },
+      "exits": [
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-accc09f2ff016db2ef9eab51819ef46eb90a7267a4d25c0934ca83c7d2858da7.mp4",
+          "frames": 175,
+          "bytes": 7612017,
+          "sha256": "accc09f2ff016db2ef9eab51819ef46eb90a7267a4d25c0934ca83c7d2858da7",
+          "phaseFrame": 0,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-433c681a00986aa219ae1acd12ee2943986441ecd12ef9f4d379da7c42c43c8b.mp4",
+          "frames": 175,
+          "bytes": 6742455,
+          "sha256": "433c681a00986aa219ae1acd12ee2943986441ecd12ef9f4d379da7c42c43c8b",
+          "phaseFrame": 60,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-2a9d9b1492c020b1013e9a794be58657695b3ad5c6fc1edd38f81323707811fe.mp4",
+          "frames": 175,
+          "bytes": 6818803,
+          "sha256": "2a9d9b1492c020b1013e9a794be58657695b3ad5c6fc1edd38f81323707811fe",
+          "phaseFrame": 120,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-d55517c17081fdf539460ff956e29afa27d3a02e22a862a8c2565dd3d58e8daa.mp4",
+          "frames": 175,
+          "bytes": 6668565,
+          "sha256": "d55517c17081fdf539460ff956e29afa27d3a02e22a862a8c2565dd3d58e8daa",
+          "phaseFrame": 180,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-4bc1c1788085e71e1887fa33324a2803749854db3e775570760d6d4442312abf.mp4",
+          "frames": 175,
+          "bytes": 6704958,
+          "sha256": "4bc1c1788085e71e1887fa33324a2803749854db3e775570760d6d4442312abf",
+          "phaseFrame": 240,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-e2c76401c7d648717d8791f4904b78a2fca794d43d0d493d56649b564eea19f5.mp4",
+          "frames": 175,
+          "bytes": 7145803,
+          "sha256": "e2c76401c7d648717d8791f4904b78a2fca794d43d0d493d56649b564eea19f5",
+          "phaseFrame": 300,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-9f6c741e9b2a405464777057af28e8e1218b76f9a52b426de0855f820e4dd056.mp4",
+          "frames": 175,
+          "bytes": 6862556,
+          "sha256": "9f6c741e9b2a405464777057af28e8e1218b76f9a52b426de0855f820e4dd056",
+          "phaseFrame": 360,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-36b8455852943e58e2f87a8403fea6802cd4d2272b4473c3cc159b95ca8a58fb.mp4",
+          "frames": 175,
+          "bytes": 6798816,
+          "sha256": "36b8455852943e58e2f87a8403fea6802cd4d2272b4473c3cc159b95ca8a58fb",
+          "phaseFrame": 420,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-65bbf97f33f2b1850ae4a429a434121e92932009526c8bd4b47d3225eb4e9483.mp4",
+          "frames": 175,
+          "bytes": 6785662,
+          "sha256": "65bbf97f33f2b1850ae4a429a434121e92932009526c8bd4b47d3225eb4e9483",
+          "phaseFrame": 480,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-9c98c80e1d220c9b6822592098f484975e50e16dbd7c653c203501f67c19b010.mp4",
+          "frames": 175,
+          "bytes": 6808801,
+          "sha256": "9c98c80e1d220c9b6822592098f484975e50e16dbd7c653c203501f67c19b010",
+          "phaseFrame": 540,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-71a918aa19a9064a4f336326cb42ee082cd8f791a228dc15aa7e56abbfb02dcd.mp4",
+          "frames": 175,
+          "bytes": 6801343,
+          "sha256": "71a918aa19a9064a4f336326cb42ee082cd8f791a228dc15aa7e56abbfb02dcd",
+          "phaseFrame": 600,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-14d53c38451e8f13f192fd1912bbc80c66ab7042af628b176bc1632c3fe0df96.mp4",
+          "frames": 175,
+          "bytes": 7832087,
+          "sha256": "14d53c38451e8f13f192fd1912bbc80c66ab7042af628b176bc1632c3fe0df96",
+          "phaseFrame": 660,
+          "resident": false
+        }
+      ],
+      "telemetrySrc": "systems/body/telemetry.json"
+    },
+    "frame": {
+      "enter": {
+        "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-fc8bc2ef945cce3daa067af84fbcfe067ee658a95d306e8df43dfc47637f91cb.mp4",
+        "frames": 175,
+        "bytes": 6682161,
+        "sha256": "fc8bc2ef945cce3daa067af84fbcfe067ee658a95d306e8df43dfc47637f91cb",
+        "resident": false
+      },
+      "loop": {
+        "src": "video-ec317a60f43f85f5630e16f31197b781d52f55dbbcd6463c97cdb4d72594d238.mp4",
+        "frames": 720,
+        "bytes": 7714797,
+        "sha256": "ec317a60f43f85f5630e16f31197b781d52f55dbbcd6463c97cdb4d72594d238",
+        "resident": true
+      },
+      "exits": [
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-7ff0930e1bed9c53b00afc4936915a6a7ac8c999a6269e8a3bdbd0172996d59c.mp4",
+          "frames": 175,
+          "bytes": 6714425,
+          "sha256": "7ff0930e1bed9c53b00afc4936915a6a7ac8c999a6269e8a3bdbd0172996d59c",
+          "phaseFrame": 0,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-4cfc5b7903cb201662eb8ef70221089cd1851b8e0fa9fded2a2c69e4577e2909.mp4",
+          "frames": 175,
+          "bytes": 5796833,
+          "sha256": "4cfc5b7903cb201662eb8ef70221089cd1851b8e0fa9fded2a2c69e4577e2909",
+          "phaseFrame": 60,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-44c3a2df102f786733de585375529ba3be3d5350d04596f0b2adc511e5412dea.mp4",
+          "frames": 175,
+          "bytes": 5893185,
+          "sha256": "44c3a2df102f786733de585375529ba3be3d5350d04596f0b2adc511e5412dea",
+          "phaseFrame": 120,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-860d77aa057f54df11b35db2a68a2483e9ee294fe5fb0862f1d817e5b4e5339f.mp4",
+          "frames": 175,
+          "bytes": 5639141,
+          "sha256": "860d77aa057f54df11b35db2a68a2483e9ee294fe5fb0862f1d817e5b4e5339f",
+          "phaseFrame": 180,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-0855b287c7b79632dae512e7b3ab4ce61be441424a7891a795f1a718e88cce6b.mp4",
+          "frames": 175,
+          "bytes": 5751520,
+          "sha256": "0855b287c7b79632dae512e7b3ab4ce61be441424a7891a795f1a718e88cce6b",
+          "phaseFrame": 240,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-15bf36c9dec8963065c3b8eb5a0be1033cd0489cee53cdff98b862756d7644e0.mp4",
+          "frames": 175,
+          "bytes": 6080425,
+          "sha256": "15bf36c9dec8963065c3b8eb5a0be1033cd0489cee53cdff98b862756d7644e0",
+          "phaseFrame": 300,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-9daaa15bbe4685a5fee2ba055317fcab080dbad945bda8b34ab8722a8fd54155.mp4",
+          "frames": 175,
+          "bytes": 5835753,
+          "sha256": "9daaa15bbe4685a5fee2ba055317fcab080dbad945bda8b34ab8722a8fd54155",
+          "phaseFrame": 360,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-e9729b82deac85c02a92673cddc8c37243750591fd98d12223cca1eb4053a4b1.mp4",
+          "frames": 175,
+          "bytes": 5856454,
+          "sha256": "e9729b82deac85c02a92673cddc8c37243750591fd98d12223cca1eb4053a4b1",
+          "phaseFrame": 420,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-a9a1289763d78c1baf094af1331f0c1c864421f25f875d6c0901bc9ed7df5209.mp4",
+          "frames": 175,
+          "bytes": 5883919,
+          "sha256": "a9a1289763d78c1baf094af1331f0c1c864421f25f875d6c0901bc9ed7df5209",
+          "phaseFrame": 480,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-a2d629d4a47cbbc562135f1c8110352c6f20d2d624f6d8fad23497526df7debd.mp4",
+          "frames": 175,
+          "bytes": 5899817,
+          "sha256": "a2d629d4a47cbbc562135f1c8110352c6f20d2d624f6d8fad23497526df7debd",
+          "phaseFrame": 540,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-02b2190d71c9a6ba6d5d5d67263fa789a4f4e867f147d25731b893a347bfd548.mp4",
+          "frames": 175,
+          "bytes": 5906459,
+          "sha256": "02b2190d71c9a6ba6d5d5d67263fa789a4f4e867f147d25731b893a347bfd548",
+          "phaseFrame": 600,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-8659bf9121e4eaf8dcdeac781c2a9f3d6adfd11bafb5db0729a71605622e22dd.mp4",
+          "frames": 175,
+          "bytes": 6817162,
+          "sha256": "8659bf9121e4eaf8dcdeac781c2a9f3d6adfd11bafb5db0729a71605622e22dd",
+          "phaseFrame": 660,
+          "resident": false
+        }
+      ],
+      "telemetrySrc": "systems/frame/telemetry.json"
+    },
+    "c41-power": {
+      "enter": {
+        "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-ed5265c4fdc25a52af429259207d02b3c5bd2ab9c0c05c798275dc353a95e372.mp4",
+        "frames": 175,
+        "bytes": 8295152,
+        "sha256": "ed5265c4fdc25a52af429259207d02b3c5bd2ab9c0c05c798275dc353a95e372",
+        "resident": false
+      },
+      "loop": {
+        "src": "video-b45d250a75ff39dcf342a10e1459f66b87265d8ab0e04c08630fca330fb68091.mp4",
+        "frames": 720,
+        "bytes": 10668721,
+        "sha256": "b45d250a75ff39dcf342a10e1459f66b87265d8ab0e04c08630fca330fb68091",
+        "resident": true
+      },
+      "exits": [
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-4129860f9eadfceebc42ea175a559c0893c34401d0a0482b8c22dd015bbe6051.mp4",
+          "frames": 175,
+          "bytes": 7640163,
+          "sha256": "4129860f9eadfceebc42ea175a559c0893c34401d0a0482b8c22dd015bbe6051",
+          "phaseFrame": 0,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-1347daabce08abf7306a8553529e9e324ec1b114677a48b674ec10828a707dfe.mp4",
+          "frames": 175,
+          "bytes": 7372640,
+          "sha256": "1347daabce08abf7306a8553529e9e324ec1b114677a48b674ec10828a707dfe",
+          "phaseFrame": 60,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-d4367d5a53ee96a5e5e734d6969f0f1be131d227537704b68cbb37ee1d81234e.mp4",
+          "frames": 175,
+          "bytes": 7434785,
+          "sha256": "d4367d5a53ee96a5e5e734d6969f0f1be131d227537704b68cbb37ee1d81234e",
+          "phaseFrame": 120,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-938285abbb4d36fb1ef2f06f3f1bbb2483eabd9e2d03170db2a137c6eda034b2.mp4",
+          "frames": 175,
+          "bytes": 6749843,
+          "sha256": "938285abbb4d36fb1ef2f06f3f1bbb2483eabd9e2d03170db2a137c6eda034b2",
+          "phaseFrame": 180,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-91c05fdd5e25089068aa3183a9c751bf932a62a9335cf27d2f5da2fe2564d6b0.mp4",
+          "frames": 175,
+          "bytes": 6739712,
+          "sha256": "91c05fdd5e25089068aa3183a9c751bf932a62a9335cf27d2f5da2fe2564d6b0",
+          "phaseFrame": 240,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-9de186a19de1458f8556c5ae20787c3c5a6e489ec4129cc851566a44dff6a261.mp4",
+          "frames": 175,
+          "bytes": 7441998,
+          "sha256": "9de186a19de1458f8556c5ae20787c3c5a6e489ec4129cc851566a44dff6a261",
+          "phaseFrame": 300,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-7ad3dbe6e428ee5f9845b35cd5f7b927217663f0b8da49d619da986d73931e56.mp4",
+          "frames": 175,
+          "bytes": 7481074,
+          "sha256": "7ad3dbe6e428ee5f9845b35cd5f7b927217663f0b8da49d619da986d73931e56",
+          "phaseFrame": 360,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-2aba5a3106d7217d5b2af3ad04b95061b58996dc38266f66882ae420b6cc2a4e.mp4",
+          "frames": 175,
+          "bytes": 7429116,
+          "sha256": "2aba5a3106d7217d5b2af3ad04b95061b58996dc38266f66882ae420b6cc2a4e",
+          "phaseFrame": 420,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-a9b3a2882ecea0e85a568f25d45836ccf2e8d59c796d1209becb4948044efba9.mp4",
+          "frames": 175,
+          "bytes": 7449009,
+          "sha256": "a9b3a2882ecea0e85a568f25d45836ccf2e8d59c796d1209becb4948044efba9",
+          "phaseFrame": 480,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-a57520134e2fd59b8e7aab46f708c89efcd40097255c73be253fcc31cca71f6a.mp4",
+          "frames": 175,
+          "bytes": 7461602,
+          "sha256": "a57520134e2fd59b8e7aab46f708c89efcd40097255c73be253fcc31cca71f6a",
+          "phaseFrame": 540,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-167647e962aa3a7d243622dec0ac8c02fd06a106bd60be3131d8c4dd4cb03b28.mp4",
+          "frames": 175,
+          "bytes": 7460254,
+          "sha256": "167647e962aa3a7d243622dec0ac8c02fd06a106bd60be3131d8c4dd4cb03b28",
+          "phaseFrame": 600,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-5aa1709bb5082b5288e951c88cd2edf64f07caeeb833398a6169739fec78d8a8.mp4",
+          "frames": 175,
+          "bytes": 7610131,
+          "sha256": "5aa1709bb5082b5288e951c88cd2edf64f07caeeb833398a6169739fec78d8a8",
+          "phaseFrame": 660,
+          "resident": false
+        }
+      ],
+      "telemetrySrc": "systems/c41-power/telemetry.json"
+    },
+    "engine": {
+      "enter": {
+        "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-2cc451a1143455c49abc461a5e9c8f33ab7a3919908f6ef42d7991310fd279db.mp4",
+        "frames": 175,
+        "bytes": 8254484,
+        "sha256": "2cc451a1143455c49abc461a5e9c8f33ab7a3919908f6ef42d7991310fd279db",
+        "resident": false
+      },
+      "loop": {
+        "src": "video-ecbdd1cc55cc2034e00cd2b16d8ea0c9483697dc18aab0ac7a3a68d50e5f9ef6.mp4",
+        "frames": 720,
+        "bytes": 6908065,
+        "sha256": "ecbdd1cc55cc2034e00cd2b16d8ea0c9483697dc18aab0ac7a3a68d50e5f9ef6",
+        "resident": true
+      },
+      "exits": [
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-c8959e24c02234492916838acbc0b4371f74765ea2892481614575305168b9de.mp4",
+          "frames": 175,
+          "bytes": 7662249,
+          "sha256": "c8959e24c02234492916838acbc0b4371f74765ea2892481614575305168b9de",
+          "phaseFrame": 0,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-374051aca0daf2e42865dae7247552388fb91aba58d6a2284aad5d128f7d297a.mp4",
+          "frames": 175,
+          "bytes": 7146558,
+          "sha256": "374051aca0daf2e42865dae7247552388fb91aba58d6a2284aad5d128f7d297a",
+          "phaseFrame": 60,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-0f1f947ee9ef18b1df820e0f44708c1e398f7378b886df0ca5859d237bf60b36.mp4",
+          "frames": 175,
+          "bytes": 7381784,
+          "sha256": "0f1f947ee9ef18b1df820e0f44708c1e398f7378b886df0ca5859d237bf60b36",
+          "phaseFrame": 120,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-b6a65b65a918063fde281c90f46c6abf2445eecc1bc364af56bf4682ea987c52.mp4",
+          "frames": 175,
+          "bytes": 6318415,
+          "sha256": "b6a65b65a918063fde281c90f46c6abf2445eecc1bc364af56bf4682ea987c52",
+          "phaseFrame": 180,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-85c88c64058a74d6832588057b40536618a0e82ad53a5aa10b84b9d3db18b802.mp4",
+          "frames": 175,
+          "bytes": 5884820,
+          "sha256": "85c88c64058a74d6832588057b40536618a0e82ad53a5aa10b84b9d3db18b802",
+          "phaseFrame": 240,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-2118bf565ed1447fd291a8c20f56fa80f992a86095a2510ed1e87832822f0f80.mp4",
+          "frames": 175,
+          "bytes": 7456928,
+          "sha256": "2118bf565ed1447fd291a8c20f56fa80f992a86095a2510ed1e87832822f0f80",
+          "phaseFrame": 300,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-682990c51c862c8bebd05228387fc967a5c23c1d72ba48ad85e2389838fa3b1b.mp4",
+          "frames": 175,
+          "bytes": 7430401,
+          "sha256": "682990c51c862c8bebd05228387fc967a5c23c1d72ba48ad85e2389838fa3b1b",
+          "phaseFrame": 360,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-48518ad809ef8559c541eec4fd7a949196e16b8864b5c57ac0ab1c96d709edfe.mp4",
+          "frames": 175,
+          "bytes": 7379720,
+          "sha256": "48518ad809ef8559c541eec4fd7a949196e16b8864b5c57ac0ab1c96d709edfe",
+          "phaseFrame": 420,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-3abe80aa988f77963bc3e0c01f27e85d733f5e46f9be4d052c4ae3fdb18bcbd2.mp4",
+          "frames": 175,
+          "bytes": 7405559,
+          "sha256": "3abe80aa988f77963bc3e0c01f27e85d733f5e46f9be4d052c4ae3fdb18bcbd2",
+          "phaseFrame": 480,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-559376794df2e72d2dffb1eb334faffc782cdc5d7d5b328df641b96edaf991ea.mp4",
+          "frames": 175,
+          "bytes": 7404541,
+          "sha256": "559376794df2e72d2dffb1eb334faffc782cdc5d7d5b328df641b96edaf991ea",
+          "phaseFrame": 540,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-daa56524efae6aa4d385dafd6a07a78aac071fc1236549233483b55c47a51654.mp4",
+          "frames": 175,
+          "bytes": 7408800,
+          "sha256": "daa56524efae6aa4d385dafd6a07a78aac071fc1236549233483b55c47a51654",
+          "phaseFrame": 600,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-1613131c60c961f7cfc39f9801080cb4577b9249b9ea41a19f8be3dd4f80bb3e.mp4",
+          "frames": 175,
+          "bytes": 7651486,
+          "sha256": "1613131c60c961f7cfc39f9801080cb4577b9249b9ea41a19f8be3dd4f80bb3e",
+          "phaseFrame": 660,
+          "resident": false
+        }
+      ],
+      "telemetrySrc": "systems/engine/telemetry.json"
+    },
+    "c41-transmission": {
+      "enter": {
+        "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-5d65d9a04581e14ef8b2740567de7cee80537f5718b94d274815cc11a381425f.mp4",
+        "frames": 175,
+        "bytes": 8431380,
+        "sha256": "5d65d9a04581e14ef8b2740567de7cee80537f5718b94d274815cc11a381425f",
+        "resident": false
+      },
+      "loop": {
+        "src": "video-f932635ae1297e2e56588a9351b0082347fc7075ac8b684f24222cebf2bfc32e.mp4",
+        "frames": 720,
+        "bytes": 21450539,
+        "sha256": "f932635ae1297e2e56588a9351b0082347fc7075ac8b684f24222cebf2bfc32e",
+        "resident": true
+      },
+      "exits": [
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-0ba0a70ac17800594018cfa40d1191829ac02499c185875b83cd1744a9f9ecd6.mp4",
+          "frames": 175,
+          "bytes": 7679525,
+          "sha256": "0ba0a70ac17800594018cfa40d1191829ac02499c185875b83cd1744a9f9ecd6",
+          "phaseFrame": 0,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-9977f8546363439a361988f76df4bfc183132619b68a85886a957ae4bb98061d.mp4",
+          "frames": 175,
+          "bytes": 7546699,
+          "sha256": "9977f8546363439a361988f76df4bfc183132619b68a85886a957ae4bb98061d",
+          "phaseFrame": 60,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-4b127cda4bb8449eff7ab9aa290f4631409102b90be79e15b40781d8ff10acd2.mp4",
+          "frames": 175,
+          "bytes": 7574014,
+          "sha256": "4b127cda4bb8449eff7ab9aa290f4631409102b90be79e15b40781d8ff10acd2",
+          "phaseFrame": 120,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-01996412990fafbc52ba4e998d3d799d10535cf4ea51207b6af7828a512dd996.mp4",
+          "frames": 175,
+          "bytes": 7416146,
+          "sha256": "01996412990fafbc52ba4e998d3d799d10535cf4ea51207b6af7828a512dd996",
+          "phaseFrame": 180,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-5f8cd975694226d687d1c89df7694cd9142626f761c96b0f9134387c148c8342.mp4",
+          "frames": 175,
+          "bytes": 7600668,
+          "sha256": "5f8cd975694226d687d1c89df7694cd9142626f761c96b0f9134387c148c8342",
+          "phaseFrame": 240,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-7c72c64edc5c9d08bb12a7a2e313c2310fbaedfcafb28c7438d10488bbd61e3a.mp4",
+          "frames": 175,
+          "bytes": 7613405,
+          "sha256": "7c72c64edc5c9d08bb12a7a2e313c2310fbaedfcafb28c7438d10488bbd61e3a",
+          "phaseFrame": 300,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-a3f8924692d623c9e87f649d150f114ef331d97c938f31c1d4413d1a327308cb.mp4",
+          "frames": 175,
+          "bytes": 7619480,
+          "sha256": "a3f8924692d623c9e87f649d150f114ef331d97c938f31c1d4413d1a327308cb",
+          "phaseFrame": 360,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-09c5c9dc7c3717107582a62d063c058ce40dc28c22a24986d027af1f9249ca38.mp4",
+          "frames": 175,
+          "bytes": 7588573,
+          "sha256": "09c5c9dc7c3717107582a62d063c058ce40dc28c22a24986d027af1f9249ca38",
+          "phaseFrame": 420,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-cf02dcdc8f0cf10fcfca5afc966623e7dd499af754bda142c22f638a3c127b8d.mp4",
+          "frames": 175,
+          "bytes": 7594430,
+          "sha256": "cf02dcdc8f0cf10fcfca5afc966623e7dd499af754bda142c22f638a3c127b8d",
+          "phaseFrame": 480,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-ed13b7f363eb076906228236bb2f7a9e0e4eece896eed627c64b1cacb099b436.mp4",
+          "frames": 175,
+          "bytes": 7605732,
+          "sha256": "ed13b7f363eb076906228236bb2f7a9e0e4eece896eed627c64b1cacb099b436",
+          "phaseFrame": 540,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-dc14ac50e9ff5a9bad49623650b6c4b7df0d712ac180c9f1c0da148cdb177ae6.mp4",
+          "frames": 175,
+          "bytes": 7598260,
+          "sha256": "dc14ac50e9ff5a9bad49623650b6c4b7df0d712ac180c9f1c0da148cdb177ae6",
+          "phaseFrame": 600,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-06cd5b5271d70cf4e70145c8ade2c1380f4fc37fdd8623435a68edc67efb2fa6.mp4",
+          "frames": 175,
+          "bytes": 7623358,
+          "sha256": "06cd5b5271d70cf4e70145c8ade2c1380f4fc37fdd8623435a68edc67efb2fa6",
+          "phaseFrame": 660,
+          "resident": false
+        }
+      ],
+      "telemetrySrc": "systems/c41-transmission/telemetry.json"
+    },
+    "e74-power": {
+      "enter": {
+        "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-f66da3bed33921d3045da56da23173f710d0543d8590f4d7f922ab20a048a4fc.mp4",
+        "frames": 175,
+        "bytes": 8621605,
+        "sha256": "f66da3bed33921d3045da56da23173f710d0543d8590f4d7f922ab20a048a4fc",
+        "resident": false
+      },
+      "loop": {
+        "src": "video-6ce101543596e260f185466b8bd4c417b7965c20c645f1d510a3be3c7aedc704.mp4",
+        "frames": 720,
+        "bytes": 9264298,
+        "sha256": "6ce101543596e260f185466b8bd4c417b7965c20c645f1d510a3be3c7aedc704",
+        "resident": true
+      },
+      "exits": [
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-59c890b089f4de3ac63da1ff9adbaabe3b8ede71295cd16547718d48966110a1.mp4",
+          "frames": 175,
+          "bytes": 6324014,
+          "sha256": "59c890b089f4de3ac63da1ff9adbaabe3b8ede71295cd16547718d48966110a1",
+          "phaseFrame": 0,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-b6fe39f139fc5fc6b52d3a6c35d1df924eec7f48d997b5e7061fbb3793d6770e.mp4",
+          "frames": 175,
+          "bytes": 7945713,
+          "sha256": "b6fe39f139fc5fc6b52d3a6c35d1df924eec7f48d997b5e7061fbb3793d6770e",
+          "phaseFrame": 60,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-da945a76d9e44b8aeaca9b0d9af4c897a47dfb1d9ab91e2c733b865b992662be.mp4",
+          "frames": 175,
+          "bytes": 7972437,
+          "sha256": "da945a76d9e44b8aeaca9b0d9af4c897a47dfb1d9ab91e2c733b865b992662be",
+          "phaseFrame": 120,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-a836a210ddbffdfeae3109041932dc172ec39a54fae4e773934ec8cfbb1a10d7.mp4",
+          "frames": 175,
+          "bytes": 7811708,
+          "sha256": "a836a210ddbffdfeae3109041932dc172ec39a54fae4e773934ec8cfbb1a10d7",
+          "phaseFrame": 180,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-91276f83ec9780e587ff55b06b2bf6eb3c1ca054e70d6c0b79a511efb2388494.mp4",
+          "frames": 175,
+          "bytes": 7774639,
+          "sha256": "91276f83ec9780e587ff55b06b2bf6eb3c1ca054e70d6c0b79a511efb2388494",
+          "phaseFrame": 240,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-da2b991c7c8751bae87818ce9e23c40800d17a6760452cada73a0f7572d999a7.mp4",
+          "frames": 175,
+          "bytes": 8039066,
+          "sha256": "da2b991c7c8751bae87818ce9e23c40800d17a6760452cada73a0f7572d999a7",
+          "phaseFrame": 300,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-d997a8f49bcb8f77c21ae1b8e140f8a3d885fccb088fe804adf3554edb1b80c6.mp4",
+          "frames": 175,
+          "bytes": 7986759,
+          "sha256": "d997a8f49bcb8f77c21ae1b8e140f8a3d885fccb088fe804adf3554edb1b80c6",
+          "phaseFrame": 360,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-1b7e02cc824bcaca76e6ec20cb7bc387e7dc92a09906bbb9166b9816ebf78827.mp4",
+          "frames": 175,
+          "bytes": 7971990,
+          "sha256": "1b7e02cc824bcaca76e6ec20cb7bc387e7dc92a09906bbb9166b9816ebf78827",
+          "phaseFrame": 420,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-1ec17916e2988ff469a42545b3ef493192aeb7bf2fa771f0a1631b5bccb5f0e2.mp4",
+          "frames": 175,
+          "bytes": 7972116,
+          "sha256": "1ec17916e2988ff469a42545b3ef493192aeb7bf2fa771f0a1631b5bccb5f0e2",
+          "phaseFrame": 480,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-f34559ae10aa7d49e793adf2dda33bdf54d071d6c5b6412b6c2472374c9715b5.mp4",
+          "frames": 175,
+          "bytes": 7979835,
+          "sha256": "f34559ae10aa7d49e793adf2dda33bdf54d071d6c5b6412b6c2472374c9715b5",
+          "phaseFrame": 540,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-fd73a073a93c9f492277728833ae8aac58bde20f2938721b69e1119ae9f21d30.mp4",
+          "frames": 175,
+          "bytes": 7965955,
+          "sha256": "fd73a073a93c9f492277728833ae8aac58bde20f2938721b69e1119ae9f21d30",
+          "phaseFrame": 600,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-eeb4d66af743b354810e920e10389bc6f19209ea9892d8a53de8c9aea39d1970.mp4",
+          "frames": 175,
+          "bytes": 6414542,
+          "sha256": "eeb4d66af743b354810e920e10389bc6f19209ea9892d8a53de8c9aea39d1970",
+          "phaseFrame": 660,
+          "resident": false
+        }
+      ],
+      "telemetrySrc": "systems/e74-power/telemetry.json"
+    },
+    "e74-transmission": {
+      "enter": {
+        "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-cedaeed41d28af2f4b47140033af30720a4c6c497f98720d366647ecabf4a27a.mp4",
+        "frames": 175,
+        "bytes": 8375354,
+        "sha256": "cedaeed41d28af2f4b47140033af30720a4c6c497f98720d366647ecabf4a27a",
+        "resident": false
+      },
+      "loop": {
+        "src": "video-d170014757f872aacb3a3ad46ad8ab33830df402550e790031f7b823398cb41a.mp4",
+        "frames": 720,
+        "bytes": 14354403,
+        "sha256": "d170014757f872aacb3a3ad46ad8ab33830df402550e790031f7b823398cb41a",
+        "resident": true
+      },
+      "exits": [
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-cfa627c120e0d7880375632386e3d27d564a3ee5cfe783dc101d39263c9eec21.mp4",
+          "frames": 175,
+          "bytes": 6927512,
+          "sha256": "cfa627c120e0d7880375632386e3d27d564a3ee5cfe783dc101d39263c9eec21",
+          "phaseFrame": 0,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-f1407c2a067fd0a881dad10b9ff1ed5c61a3f1ce123c3fd1f1d0b5518be42eb3.mp4",
+          "frames": 175,
+          "bytes": 7698595,
+          "sha256": "f1407c2a067fd0a881dad10b9ff1ed5c61a3f1ce123c3fd1f1d0b5518be42eb3",
+          "phaseFrame": 60,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-74ef3e4a9fb81202820c02b8c2a94bb07340cc32671ed3ce0592441e348c3457.mp4",
+          "frames": 175,
+          "bytes": 7752848,
+          "sha256": "74ef3e4a9fb81202820c02b8c2a94bb07340cc32671ed3ce0592441e348c3457",
+          "phaseFrame": 120,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-55e894f6ade836861c6733990b627f5e1a59bd9b43e22018100f0bb1a4fcc11d.mp4",
+          "frames": 175,
+          "bytes": 7533760,
+          "sha256": "55e894f6ade836861c6733990b627f5e1a59bd9b43e22018100f0bb1a4fcc11d",
+          "phaseFrame": 180,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-78dc8a057c00c7066d512773b5bf18c26563649233b3dee6a58efba3b1b378ab.mp4",
+          "frames": 175,
+          "bytes": 7521303,
+          "sha256": "78dc8a057c00c7066d512773b5bf18c26563649233b3dee6a58efba3b1b378ab",
+          "phaseFrame": 240,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-49e4eff01b6b8426ec3394c203f2bba3d9e4a31cb02b97720bd002f5762046d7.mp4",
+          "frames": 175,
+          "bytes": 7821036,
+          "sha256": "49e4eff01b6b8426ec3394c203f2bba3d9e4a31cb02b97720bd002f5762046d7",
+          "phaseFrame": 300,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-5cc44a1697ffcf4e989131843e1ad9f7070c53d1af5c780b33cd5184b56c09b7.mp4",
+          "frames": 175,
+          "bytes": 7757467,
+          "sha256": "5cc44a1697ffcf4e989131843e1ad9f7070c53d1af5c780b33cd5184b56c09b7",
+          "phaseFrame": 360,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-f94d14043c604643ca23330919b1280ecd0cf96c79e5b1646c29c8b1f8c4b12a.mp4",
+          "frames": 175,
+          "bytes": 7752636,
+          "sha256": "f94d14043c604643ca23330919b1280ecd0cf96c79e5b1646c29c8b1f8c4b12a",
+          "phaseFrame": 420,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-8c43f83e896cf4b7c5dce9c6c92a6b8df05dc02f5e70359b5ad0d0fed797ab84.mp4",
+          "frames": 175,
+          "bytes": 7753036,
+          "sha256": "8c43f83e896cf4b7c5dce9c6c92a6b8df05dc02f5e70359b5ad0d0fed797ab84",
+          "phaseFrame": 480,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-6255ca3574af3895fa5c00c1dda055e9cf8051a38275db6b7bdf9ba0b1dbff91.mp4",
+          "frames": 175,
+          "bytes": 7756243,
+          "sha256": "6255ca3574af3895fa5c00c1dda055e9cf8051a38275db6b7bdf9ba0b1dbff91",
+          "phaseFrame": 540,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-797c009d506d7f20646389bd3d71e95ea98ad1f4a0d3556ac797b6bcb4fda671.mp4",
+          "frames": 175,
+          "bytes": 7749263,
+          "sha256": "797c009d506d7f20646389bd3d71e95ea98ad1f4a0d3556ac797b6bcb4fda671",
+          "phaseFrame": 600,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-2c9d0a95086b191727235d527b42683d6a8492257d8cd1dcc4a32a92f74f8658.mp4",
+          "frames": 175,
+          "bytes": 7991215,
+          "sha256": "2c9d0a95086b191727235d527b42683d6a8492257d8cd1dcc4a32a92f74f8658",
+          "phaseFrame": 660,
+          "resident": false
+        }
+      ],
+      "telemetrySrc": "systems/e74-transmission/telemetry.json"
+    },
+    "ecu": {
+      "enter": {
+        "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-4a6d963f26bb1e885c215a453f8b2dfaa44e8523a752b717af2a584f546fd85e.mp4",
+        "frames": 175,
+        "bytes": 8528803,
+        "sha256": "4a6d963f26bb1e885c215a453f8b2dfaa44e8523a752b717af2a584f546fd85e",
+        "resident": false
+      },
+      "loop": {
+        "src": "video-e51964d4555ee07232864ee83d1338c3da2095bb492745634ec9d148e422379b.mp4",
+        "frames": 720,
+        "bytes": 4340513,
+        "sha256": "e51964d4555ee07232864ee83d1338c3da2095bb492745634ec9d148e422379b",
+        "resident": true
+      },
+      "exits": [
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-abc860c36f655b4f287a2c3b659ab46084a262a0fb8f6c2fc01bd5d215ff1701.mp4",
+          "frames": 175,
+          "bytes": 6273741,
+          "sha256": "abc860c36f655b4f287a2c3b659ab46084a262a0fb8f6c2fc01bd5d215ff1701",
+          "phaseFrame": 0,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-213cefccda05d72340d36dd7120c94f4a318f3723a3cb8700809bb405738efbe.mp4",
+          "frames": 175,
+          "bytes": 7901439,
+          "sha256": "213cefccda05d72340d36dd7120c94f4a318f3723a3cb8700809bb405738efbe",
+          "phaseFrame": 60,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-141888618d8662fa20e118d26ded2d61f3999cc0c3cc305863cc4f0fc32623ed.mp4",
+          "frames": 175,
+          "bytes": 7916119,
+          "sha256": "141888618d8662fa20e118d26ded2d61f3999cc0c3cc305863cc4f0fc32623ed",
+          "phaseFrame": 120,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-09ab39aa6e2f54f42bae51f9fdf02a7260275b4c9f701186f30e78f45650e589.mp4",
+          "frames": 175,
+          "bytes": 7757677,
+          "sha256": "09ab39aa6e2f54f42bae51f9fdf02a7260275b4c9f701186f30e78f45650e589",
+          "phaseFrame": 180,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-6552fc416839239c9910a59e743208c8642c2cfc3beaae51d7ba4972ac8a1dbf.mp4",
+          "frames": 175,
+          "bytes": 7713859,
+          "sha256": "6552fc416839239c9910a59e743208c8642c2cfc3beaae51d7ba4972ac8a1dbf",
+          "phaseFrame": 240,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-2071705823693bcdf0efae19eb9e7515041388613cb5bd9485cff78cd2340f98.mp4",
+          "frames": 175,
+          "bytes": 7967507,
+          "sha256": "2071705823693bcdf0efae19eb9e7515041388613cb5bd9485cff78cd2340f98",
+          "phaseFrame": 300,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-a99bd122744ceb5a19a45a71fec16cb145c16573e634701148e8a0649ce51d94.mp4",
+          "frames": 175,
+          "bytes": 7931190,
+          "sha256": "a99bd122744ceb5a19a45a71fec16cb145c16573e634701148e8a0649ce51d94",
+          "phaseFrame": 360,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-8bbd47a6fd14adff3fa4c88964739bd7f23ec0a066f83a43e957eb5627cd51e3.mp4",
+          "frames": 175,
+          "bytes": 7921334,
+          "sha256": "8bbd47a6fd14adff3fa4c88964739bd7f23ec0a066f83a43e957eb5627cd51e3",
+          "phaseFrame": 420,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-055853ad1a99afa41c80e12ff8f703b99ae01b22aef9cceea0ff6f75c6d64e31.mp4",
+          "frames": 175,
+          "bytes": 7916129,
+          "sha256": "055853ad1a99afa41c80e12ff8f703b99ae01b22aef9cceea0ff6f75c6d64e31",
+          "phaseFrame": 480,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-d3a3053887c215b363106c1e011c08932a56183afa1da01b0e47eccd174944b6.mp4",
+          "frames": 175,
+          "bytes": 7930104,
+          "sha256": "d3a3053887c215b363106c1e011c08932a56183afa1da01b0e47eccd174944b6",
+          "phaseFrame": 540,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-64e5716a9e4c74f9fac84ecaa0b5c1532f04b2990d3d5cdbfa328b80d681ebfa.mp4",
+          "frames": 175,
+          "bytes": 7916215,
+          "sha256": "64e5716a9e4c74f9fac84ecaa0b5c1532f04b2990d3d5cdbfa328b80d681ebfa",
+          "phaseFrame": 600,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-4f234bd9d9798bc0e89bb7fe634bc31d33ce8657370872e7d15b3e87bf64ba3e.mp4",
+          "frames": 175,
+          "bytes": 6350015,
+          "sha256": "4f234bd9d9798bc0e89bb7fe634bc31d33ce8657370872e7d15b3e87bf64ba3e",
+          "phaseFrame": 660,
+          "resident": false
+        }
+      ],
+      "telemetrySrc": "systems/ecu/telemetry.json"
+    },
+    "battery": {
+      "enter": {
+        "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-966231cb2a7a5bde1c50f334247201a7cca9579f7cc47c710161a7604296af5b.mp4",
+        "frames": 175,
+        "bytes": 7798468,
+        "sha256": "966231cb2a7a5bde1c50f334247201a7cca9579f7cc47c710161a7604296af5b",
+        "resident": false
+      },
+      "loop": {
+        "src": "video-2ce401357c4669e704e423b68718ee834c6edbf65692abff0344e24456915535.mp4",
+        "frames": 720,
+        "bytes": 3391573,
+        "sha256": "2ce401357c4669e704e423b68718ee834c6edbf65692abff0344e24456915535",
+        "resident": true
+      },
+      "exits": [
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-b86bfd2484187b4b94dc74032ef1dd7b9b51fbc4d4c8f526dc2385d2b33a2385.mp4",
+          "frames": 175,
+          "bytes": 7365318,
+          "sha256": "b86bfd2484187b4b94dc74032ef1dd7b9b51fbc4d4c8f526dc2385d2b33a2385",
+          "phaseFrame": 0,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-969d581ece62b953ec3ef3531a5463304280fed045c3117b76278e1b3ca22b42.mp4",
+          "frames": 175,
+          "bytes": 7156753,
+          "sha256": "969d581ece62b953ec3ef3531a5463304280fed045c3117b76278e1b3ca22b42",
+          "phaseFrame": 60,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-db5a98fa105dc5d7477dd53083a3115f56aded12140c8216d6d0a37cbb5aada5.mp4",
+          "frames": 175,
+          "bytes": 7341762,
+          "sha256": "db5a98fa105dc5d7477dd53083a3115f56aded12140c8216d6d0a37cbb5aada5",
+          "phaseFrame": 120,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-23bf7164d115145b894fc610b15dc26ec63b722dc1c65c8a30222bf330c47fbf.mp4",
+          "frames": 175,
+          "bytes": 6516684,
+          "sha256": "23bf7164d115145b894fc610b15dc26ec63b722dc1c65c8a30222bf330c47fbf",
+          "phaseFrame": 180,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-da3172c1666ed20574903989443ddd4c18a87891de46c632440d606cc5903e25.mp4",
+          "frames": 175,
+          "bytes": 6436960,
+          "sha256": "da3172c1666ed20574903989443ddd4c18a87891de46c632440d606cc5903e25",
+          "phaseFrame": 240,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-41c663951c9b4a3dbfa0cb5ef4d71d3304ece91ccaba29ffdc1f2580a7e551b1.mp4",
+          "frames": 175,
+          "bytes": 7434136,
+          "sha256": "41c663951c9b4a3dbfa0cb5ef4d71d3304ece91ccaba29ffdc1f2580a7e551b1",
+          "phaseFrame": 300,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-ba9861caaff2c381fb4cedc44b8d9e462f0986d4efae692b9722e69bd5a4bda9.mp4",
+          "frames": 175,
+          "bytes": 7364816,
+          "sha256": "ba9861caaff2c381fb4cedc44b8d9e462f0986d4efae692b9722e69bd5a4bda9",
+          "phaseFrame": 360,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-17faf4447e2e94056f3b3edb2f77d9c0fe23a2888edee51cae49d728e2c2b8a6.mp4",
+          "frames": 175,
+          "bytes": 7333457,
+          "sha256": "17faf4447e2e94056f3b3edb2f77d9c0fe23a2888edee51cae49d728e2c2b8a6",
+          "phaseFrame": 420,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-c53e69056fdb4b0e07dc471f720eacd93f73dd7e21ff449df13f11871a34a6d5.mp4",
+          "frames": 175,
+          "bytes": 7335631,
+          "sha256": "c53e69056fdb4b0e07dc471f720eacd93f73dd7e21ff449df13f11871a34a6d5",
+          "phaseFrame": 480,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-ae9c7f0341cc3dbbbc8c1cd9fa72eb227ea02e73c81f737827c253a23a208061.mp4",
+          "frames": 175,
+          "bytes": 7352359,
+          "sha256": "ae9c7f0341cc3dbbbc8c1cd9fa72eb227ea02e73c81f737827c253a23a208061",
+          "phaseFrame": 540,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-37502ef2b2e53ea07df3b6a0775d01cb22a9b54c7922e9d8ac61617a6fe35260.mp4",
+          "frames": 175,
+          "bytes": 7343228,
+          "sha256": "37502ef2b2e53ea07df3b6a0775d01cb22a9b54c7922e9d8ac61617a6fe35260",
+          "phaseFrame": 600,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-d2eea40fe2e56b7ba37cffddefb8cec146e2e0c9ace3f68da14a0e0b15564adb.mp4",
+          "frames": 175,
+          "bytes": 7476942,
+          "sha256": "d2eea40fe2e56b7ba37cffddefb8cec146e2e0c9ace3f68da14a0e0b15564adb",
+          "phaseFrame": 660,
+          "resident": false
+        }
+      ],
+      "telemetrySrc": "systems/battery/telemetry.json"
+    },
+    "wiring": {
+      "enter": {
+        "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-7f64b58f68860de55d041ff35933ed36b7014c033467b469679fc608f2b136ef.mp4",
+        "frames": 175,
+        "bytes": 6619013,
+        "sha256": "7f64b58f68860de55d041ff35933ed36b7014c033467b469679fc608f2b136ef",
+        "resident": false
+      },
+      "loop": {
+        "src": "video-3006f73ccefec21cd0131284e5d6f7b4642a28f82d9e63b3ba0169c6aa6379b2.mp4",
+        "frames": 720,
+        "bytes": 3075493,
+        "sha256": "3006f73ccefec21cd0131284e5d6f7b4642a28f82d9e63b3ba0169c6aa6379b2",
+        "resident": true
+      },
+      "exits": [
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-c20a8bfcefd440cbcadf8f6a1530c35390be3ca9e75647dfcb2f574e7084d6ff.mp4",
+          "frames": 175,
+          "bytes": 5887546,
+          "sha256": "c20a8bfcefd440cbcadf8f6a1530c35390be3ca9e75647dfcb2f574e7084d6ff",
+          "phaseFrame": 0,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-5097b0587a2df85a7dba8e73f0d82d09d33dd22fb4e6aa9673a0980d27a1dded.mp4",
+          "frames": 175,
+          "bytes": 6590177,
+          "sha256": "5097b0587a2df85a7dba8e73f0d82d09d33dd22fb4e6aa9673a0980d27a1dded",
+          "phaseFrame": 60,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-30b491dbda952aa0c7551682420e85d2fa4f36fc7ba11976c1335535aabb3324.mp4",
+          "frames": 175,
+          "bytes": 6459720,
+          "sha256": "30b491dbda952aa0c7551682420e85d2fa4f36fc7ba11976c1335535aabb3324",
+          "phaseFrame": 120,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-4ccd201c469a9f78c0b822db4bda5a0e81a61a9227c7fe86994734ca0dfc67a2.mp4",
+          "frames": 175,
+          "bytes": 7824455,
+          "sha256": "4ccd201c469a9f78c0b822db4bda5a0e81a61a9227c7fe86994734ca0dfc67a2",
+          "phaseFrame": 180,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-6e33e89800927f8ada9d1c66d376d74e169f9f0cc7a6366af6bb091c6e65d370.mp4",
+          "frames": 175,
+          "bytes": 7779639,
+          "sha256": "6e33e89800927f8ada9d1c66d376d74e169f9f0cc7a6366af6bb091c6e65d370",
+          "phaseFrame": 240,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-7580f1240cc05617e8f179cacdcee1b7302f4a1c34644fb6b779d4ea8d126422.mp4",
+          "frames": 175,
+          "bytes": 6336497,
+          "sha256": "7580f1240cc05617e8f179cacdcee1b7302f4a1c34644fb6b779d4ea8d126422",
+          "phaseFrame": 300,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-c7788aac0f1a09a6367ee2bd2d37192b68d0a5bdbd5f9f38c2eaeb2df1916515.mp4",
+          "frames": 175,
+          "bytes": 6483295,
+          "sha256": "c7788aac0f1a09a6367ee2bd2d37192b68d0a5bdbd5f9f38c2eaeb2df1916515",
+          "phaseFrame": 360,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-ed6ba563b7435cf6875a675c32988f1b1278cc4b5d56ad1631a1aaf771daedd1.mp4",
+          "frames": 175,
+          "bytes": 6460150,
+          "sha256": "ed6ba563b7435cf6875a675c32988f1b1278cc4b5d56ad1631a1aaf771daedd1",
+          "phaseFrame": 420,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-948e49671bc636635538d6f63e5c4f7c0817c123f017caeaefc4d59c66db2048.mp4",
+          "frames": 175,
+          "bytes": 6454938,
+          "sha256": "948e49671bc636635538d6f63e5c4f7c0817c123f017caeaefc4d59c66db2048",
+          "phaseFrame": 480,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-68206663819e962b20cfc29673a27506cd70833d4008d954668ed95d73b2162c.mp4",
+          "frames": 175,
+          "bytes": 6462643,
+          "sha256": "68206663819e962b20cfc29673a27506cd70833d4008d954668ed95d73b2162c",
+          "phaseFrame": 540,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-55b5d0cb868844e8a66737a42060e056fa725ade168af9b73f3870d1e2ca58aa.mp4",
+          "frames": 175,
+          "bytes": 6458756,
+          "sha256": "55b5d0cb868844e8a66737a42060e056fa725ade168af9b73f3870d1e2ca58aa",
+          "phaseFrame": 600,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-6b7a6ec8da7e49e84af55ec9cd43782b4a64c42f490079235d19c046a81853dd.mp4",
+          "frames": 175,
+          "bytes": 6001243,
+          "sha256": "6b7a6ec8da7e49e84af55ec9cd43782b4a64c42f490079235d19c046a81853dd",
+          "phaseFrame": 660,
+          "resident": false
+        }
+      ],
+      "telemetrySrc": "systems/wiring/telemetry.json"
+    },
+    "driverless": {
+      "enter": {
+        "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-b50c758e30b012d3b7202aaf2324da958f050cc2801cfe4d6471861f6961b3e5.mp4",
+        "frames": 175,
+        "bytes": 6066204,
+        "sha256": "b50c758e30b012d3b7202aaf2324da958f050cc2801cfe4d6471861f6961b3e5",
+        "resident": false
+      },
+      "loop": {
+        "src": "video-590a08abdbbff2f46d0c14bc9528b8baa38d9134cdc31e5ccf35c07107dcdd65.mp4",
+        "frames": 720,
+        "bytes": 3782356,
+        "sha256": "590a08abdbbff2f46d0c14bc9528b8baa38d9134cdc31e5ccf35c07107dcdd65",
+        "resident": true
+      },
+      "exits": [
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-571345f57d2cbabd5726f15230f71b75b6b7099af502dc51e2540f72ce1877f1.mp4",
+          "frames": 175,
+          "bytes": 6971722,
+          "sha256": "571345f57d2cbabd5726f15230f71b75b6b7099af502dc51e2540f72ce1877f1",
+          "phaseFrame": 0,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-8426a21f50ffa033853ff6f585ae19dfd0fd2bc91a594e2fb0ba12a5b97b6cc5.mp4",
+          "frames": 175,
+          "bytes": 5429602,
+          "sha256": "8426a21f50ffa033853ff6f585ae19dfd0fd2bc91a594e2fb0ba12a5b97b6cc5",
+          "phaseFrame": 60,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-598dd698acb88b3f13309d0b4bdf2961f1f51e629e24d5b8605d5c5e2ad977b4.mp4",
+          "frames": 175,
+          "bytes": 5120684,
+          "sha256": "598dd698acb88b3f13309d0b4bdf2961f1f51e629e24d5b8605d5c5e2ad977b4",
+          "phaseFrame": 120,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-95b759933fca380a512afeff4826832ea52a4a04016ab83db3a5f5613fd4b48d.mp4",
+          "frames": 175,
+          "bytes": 5654187,
+          "sha256": "95b759933fca380a512afeff4826832ea52a4a04016ab83db3a5f5613fd4b48d",
+          "phaseFrame": 180,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-8d824763edd8356d038d56ee468ba18fcdd136841ecceb0f71adbf24f41f31d9.mp4",
+          "frames": 175,
+          "bytes": 5740253,
+          "sha256": "8d824763edd8356d038d56ee468ba18fcdd136841ecceb0f71adbf24f41f31d9",
+          "phaseFrame": 240,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-e190b7dfff235d1e549bc05a474a14de73a16e4d47b8863e824cec4ad73e3fa1.mp4",
+          "frames": 175,
+          "bytes": 6029596,
+          "sha256": "e190b7dfff235d1e549bc05a474a14de73a16e4d47b8863e824cec4ad73e3fa1",
+          "phaseFrame": 300,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-1085f4e1b52cda14e261f13108b41dbf389eb211019ea0003483ad014083a061.mp4",
+          "frames": 175,
+          "bytes": 5125253,
+          "sha256": "1085f4e1b52cda14e261f13108b41dbf389eb211019ea0003483ad014083a061",
+          "phaseFrame": 360,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-a80ee574ff0c72e6f1e59d5ba9e9178b0916219011fa027e6bda4257bd24b018.mp4",
+          "frames": 175,
+          "bytes": 5134968,
+          "sha256": "a80ee574ff0c72e6f1e59d5ba9e9178b0916219011fa027e6bda4257bd24b018",
+          "phaseFrame": 420,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-6b834c9822e27f386e4fcf9625453e7b45ffc6a048101fbc579596002817e933.mp4",
+          "frames": 175,
+          "bytes": 5136952,
+          "sha256": "6b834c9822e27f386e4fcf9625453e7b45ffc6a048101fbc579596002817e933",
+          "phaseFrame": 480,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-7f2c5de1b8a3457f050c7e9f39e8015c54296b1c9c87cc170c5ab115450906fd.mp4",
+          "frames": 175,
+          "bytes": 5134645,
+          "sha256": "7f2c5de1b8a3457f050c7e9f39e8015c54296b1c9c87cc170c5ab115450906fd",
+          "phaseFrame": 540,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-e33ec7fdb806637ae17b456e7f7d5c1ce249aeae650e453aefc14a00846b799c.mp4",
+          "frames": 175,
+          "bytes": 5142104,
+          "sha256": "e33ec7fdb806637ae17b456e7f7d5c1ce249aeae650e453aefc14a00846b799c",
+          "phaseFrame": 600,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-28463ac66f53cc31e2ebdb2675b0e50d2865710abbe03feb6f16e83b0a4b5331.mp4",
+          "frames": 175,
+          "bytes": 6936650,
+          "sha256": "28463ac66f53cc31e2ebdb2675b0e50d2865710abbe03feb6f16e83b0a4b5331",
+          "phaseFrame": 660,
+          "resident": false
+        }
+      ],
+      "telemetrySrc": "systems/driverless/telemetry.json"
+    },
+    "algorithm": {
+      "enter": {
+        "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-0c1371c5ea65fd045898bee5e757c013ef0722dd2b7860d09b6cb5cce7fc19eb.mp4",
+        "frames": 175,
+        "bytes": 6512458,
+        "sha256": "0c1371c5ea65fd045898bee5e757c013ef0722dd2b7860d09b6cb5cce7fc19eb",
+        "resident": false
+      },
+      "loop": {
+        "src": "video-16c59b07a6a897be0d208373af9cd5f4f8aa4ddc8809fdc23a541ccf7c881194.mp4",
+        "frames": 720,
+        "bytes": 3159938,
+        "sha256": "16c59b07a6a897be0d208373af9cd5f4f8aa4ddc8809fdc23a541ccf7c881194",
+        "resident": true
+      },
+      "exits": [
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-5983ed17fa77175190060434611fef07edf4fefee53037b39141fdca33d4bf29.mp4",
+          "frames": 175,
+          "bytes": 7100624,
+          "sha256": "5983ed17fa77175190060434611fef07edf4fefee53037b39141fdca33d4bf29",
+          "phaseFrame": 0,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-5bd9dead4cd2d6c4e2818f2cd6814ff2e2c08e23efbc3e828569a80bf4a59a29.mp4",
+          "frames": 175,
+          "bytes": 5782268,
+          "sha256": "5bd9dead4cd2d6c4e2818f2cd6814ff2e2c08e23efbc3e828569a80bf4a59a29",
+          "phaseFrame": 60,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-23f15681a8452da6599224e32820fcaf54e74517c422654e293d4f9091124926.mp4",
+          "frames": 175,
+          "bytes": 6002877,
+          "sha256": "23f15681a8452da6599224e32820fcaf54e74517c422654e293d4f9091124926",
+          "phaseFrame": 120,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-1f47f0a37520642a4596be37385b0ce856243c0d5e3d55aefa3244d90970a54f.mp4",
+          "frames": 175,
+          "bytes": 5813596,
+          "sha256": "1f47f0a37520642a4596be37385b0ce856243c0d5e3d55aefa3244d90970a54f",
+          "phaseFrame": 180,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-a2f938efc67f7ea366ab17b5050a51501dc0766278a2239d4e3fed943a131513.mp4",
+          "frames": 175,
+          "bytes": 5857108,
+          "sha256": "a2f938efc67f7ea366ab17b5050a51501dc0766278a2239d4e3fed943a131513",
+          "phaseFrame": 240,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-4a5cde3d6463224c0563eda0910b25d731ec02ba2e1939f872f9ae7210377515.mp4",
+          "frames": 175,
+          "bytes": 6432984,
+          "sha256": "4a5cde3d6463224c0563eda0910b25d731ec02ba2e1939f872f9ae7210377515",
+          "phaseFrame": 300,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-a4d8d67133f8f9348129b058aa5a65fe42bafd1f9443cc8cf9c4aa365cdf06ce.mp4",
+          "frames": 175,
+          "bytes": 6036727,
+          "sha256": "a4d8d67133f8f9348129b058aa5a65fe42bafd1f9443cc8cf9c4aa365cdf06ce",
+          "phaseFrame": 360,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-4e4aacb38e920f3acd9f637b27108dab7666526517a9af42f4bce9ce5e09b654.mp4",
+          "frames": 175,
+          "bytes": 6015458,
+          "sha256": "4e4aacb38e920f3acd9f637b27108dab7666526517a9af42f4bce9ce5e09b654",
+          "phaseFrame": 420,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-6a40ec50507319e5e33b5396b63f975850978909991809eef89ecfb353a5c39d.mp4",
+          "frames": 175,
+          "bytes": 6022903,
+          "sha256": "6a40ec50507319e5e33b5396b63f975850978909991809eef89ecfb353a5c39d",
+          "phaseFrame": 480,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-8558a7d1228191213e4f278915bc2d6ce037a3e8a7cbc517f1600181072f7bdd.mp4",
+          "frames": 175,
+          "bytes": 6021221,
+          "sha256": "8558a7d1228191213e4f278915bc2d6ce037a3e8a7cbc517f1600181072f7bdd",
+          "phaseFrame": 540,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-dda45ba5606f23e7bb087d32d78f9407fd5819e62ebf884940220a40c9489995.mp4",
+          "frames": 175,
+          "bytes": 6030114,
+          "sha256": "dda45ba5606f23e7bb087d32d78f9407fd5819e62ebf884940220a40c9489995",
+          "phaseFrame": 600,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-9ccf283e90e4b26252086a66c471a5216604d166db331189a42672707ca1fc17.mp4",
+          "frames": 175,
+          "bytes": 7041722,
+          "sha256": "9ccf283e90e4b26252086a66c471a5216604d166db331189a42672707ca1fc17",
+          "phaseFrame": 660,
+          "resident": false
+        }
+      ],
+      "telemetrySrc": "systems/algorithm/telemetry.json"
+    },
+    "control": {
+      "enter": {
+        "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-0f69968585acdfbe5890f353b62ffcc46756373c0217da3e811c7d8ed16cfdf0.mp4",
+        "frames": 175,
+        "bytes": 6689721,
+        "sha256": "0f69968585acdfbe5890f353b62ffcc46756373c0217da3e811c7d8ed16cfdf0",
+        "resident": false
+      },
+      "loop": {
+        "src": "video-b6af5764bc78a7d285efa092d2b6135c642f485af2d383569428cfe578125843.mp4",
+        "frames": 720,
+        "bytes": 7202126,
+        "sha256": "b6af5764bc78a7d285efa092d2b6135c642f485af2d383569428cfe578125843",
+        "resident": true
+      },
+      "exits": [
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-c32f38655517ae45a3604dcadf401fbebb7f1001b773200b7ded2b2da4db4df2.mp4",
+          "frames": 175,
+          "bytes": 7408543,
+          "sha256": "c32f38655517ae45a3604dcadf401fbebb7f1001b773200b7ded2b2da4db4df2",
+          "phaseFrame": 0,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-07a30a976b2d19c58143d2902a16a61403dea87fd82c6853e05f3dfb8408a831.mp4",
+          "frames": 175,
+          "bytes": 6031243,
+          "sha256": "07a30a976b2d19c58143d2902a16a61403dea87fd82c6853e05f3dfb8408a831",
+          "phaseFrame": 60,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-57a31201b919edd1ff626e4d98953831f5ccdba03921515231a468a7e68db5a0.mp4",
+          "frames": 175,
+          "bytes": 5739319,
+          "sha256": "57a31201b919edd1ff626e4d98953831f5ccdba03921515231a468a7e68db5a0",
+          "phaseFrame": 120,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-5be6c55a3940214741340731c554eb3034079ee84c142d1861cc71676f6a9ecb.mp4",
+          "frames": 175,
+          "bytes": 6152893,
+          "sha256": "5be6c55a3940214741340731c554eb3034079ee84c142d1861cc71676f6a9ecb",
+          "phaseFrame": 180,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-f1e67e3f06b42f5d27301806e777f277e22eb2aec2a0e28473b63fc3d41c4fe9.mp4",
+          "frames": 175,
+          "bytes": 6188604,
+          "sha256": "f1e67e3f06b42f5d27301806e777f277e22eb2aec2a0e28473b63fc3d41c4fe9",
+          "phaseFrame": 240,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-89ab337d7db4b572df643ae5f0aab118aa9986d9fc4b326a959679d9a207a87c.mp4",
+          "frames": 175,
+          "bytes": 6489387,
+          "sha256": "89ab337d7db4b572df643ae5f0aab118aa9986d9fc4b326a959679d9a207a87c",
+          "phaseFrame": 300,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-0547c6d08e9e15f47222f8cb8cde4aad0850768e3dd8cf483f46c48c15486fce.mp4",
+          "frames": 175,
+          "bytes": 5743592,
+          "sha256": "0547c6d08e9e15f47222f8cb8cde4aad0850768e3dd8cf483f46c48c15486fce",
+          "phaseFrame": 360,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-eef969aafa57a17007b9c33935e44622e374311d2577a834493087f1513bfea9.mp4",
+          "frames": 175,
+          "bytes": 5746431,
+          "sha256": "eef969aafa57a17007b9c33935e44622e374311d2577a834493087f1513bfea9",
+          "phaseFrame": 420,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-18ad5e57dae5f02c58bafed651046c441f6ce563288b388d84222c2ba5a85afd.mp4",
+          "frames": 175,
+          "bytes": 5750741,
+          "sha256": "18ad5e57dae5f02c58bafed651046c441f6ce563288b388d84222c2ba5a85afd",
+          "phaseFrame": 480,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-9bd8e8604df82b614b547da0fcf6e57cc7cc7559be2165ba6265f6d076ee9d3e.mp4",
+          "frames": 175,
+          "bytes": 5752877,
+          "sha256": "9bd8e8604df82b614b547da0fcf6e57cc7cc7559be2165ba6265f6d076ee9d3e",
+          "phaseFrame": 540,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-f991686ef6a4334b7c06318da21a33a30ca10152bd7ab066b50794bdb92b195d.mp4",
+          "frames": 175,
+          "bytes": 5765461,
+          "sha256": "f991686ef6a4334b7c06318da21a33a30ca10152bd7ab066b50794bdb92b195d",
+          "phaseFrame": 600,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-e99310cd655b3a579b5ff50ec559ef30627ed0f2f77cc19ccce4e2c70da8896a.mp4",
+          "frames": 175,
+          "bytes": 7392260,
+          "sha256": "e99310cd655b3a579b5ff50ec559ef30627ed0f2f77cc19ccce4e2c70da8896a",
+          "phaseFrame": 660,
+          "resident": false
+        }
+      ],
+      "telemetrySrc": "systems/control/telemetry.json"
+    },
+    "operations": {
+      "enter": {
+        "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-7538ce79cea5180d572d64529f5ac7bb570f7bed9ff7bfb97e9949f8c17d51be.mp4",
+        "frames": 373,
+        "bytes": 10142928,
+        "sha256": "7538ce79cea5180d572d64529f5ac7bb570f7bed9ff7bfb97e9949f8c17d51be",
+        "resident": false
+      },
+      "loop": {
+        "src": "video-e85315da15faffb2cb413e3a256a5636f29adb6b0b7937d16af0220912c640fe.mp4",
+        "frames": 720,
+        "bytes": 775969,
+        "sha256": "e85315da15faffb2cb413e3a256a5636f29adb6b0b7937d16af0220912c640fe",
+        "resident": true
+      },
+      "exits": [
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-5858a2b86f6040514f62bf1569b13c0a1e19e3c40878b84f2df497239609e97f.mp4",
+          "frames": 265,
+          "bytes": 8626265,
+          "sha256": "5858a2b86f6040514f62bf1569b13c0a1e19e3c40878b84f2df497239609e97f",
+          "phaseFrame": 0,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-8ac64c65b31ca5f1c505baf1cd56ef9bdcb020d97d7bece9bf8219f5174a694b.mp4",
+          "frames": 265,
+          "bytes": 8619106,
+          "sha256": "8ac64c65b31ca5f1c505baf1cd56ef9bdcb020d97d7bece9bf8219f5174a694b",
+          "phaseFrame": 60,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-6d398574a262286ebdd377fb1e8a7b57ceca0701d87e9222d009783f861307b5.mp4",
+          "frames": 265,
+          "bytes": 8624543,
+          "sha256": "6d398574a262286ebdd377fb1e8a7b57ceca0701d87e9222d009783f861307b5",
+          "phaseFrame": 120,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-e364ac24138f86fa4f887f7b5a04ec07ee36cd033715010ab245c88fa54ccc7f.mp4",
+          "frames": 265,
+          "bytes": 8624644,
+          "sha256": "e364ac24138f86fa4f887f7b5a04ec07ee36cd033715010ab245c88fa54ccc7f",
+          "phaseFrame": 180,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-7d051a1ae61a7f188bd6c12a446eff334ab25104185e63f9c70944c14668893b.mp4",
+          "frames": 265,
+          "bytes": 8613120,
+          "sha256": "7d051a1ae61a7f188bd6c12a446eff334ab25104185e63f9c70944c14668893b",
+          "phaseFrame": 240,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-6077e1311320b7f37575f4468a5886451e6d6b273332405e8ed44f3d99263c51.mp4",
+          "frames": 265,
+          "bytes": 8627074,
+          "sha256": "6077e1311320b7f37575f4468a5886451e6d6b273332405e8ed44f3d99263c51",
+          "phaseFrame": 300,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-3f9d4ea6c10aacddd3a68c784fec1dc990ae7f5992ce1d187a39411c1ac9b763.mp4",
+          "frames": 265,
+          "bytes": 8612992,
+          "sha256": "3f9d4ea6c10aacddd3a68c784fec1dc990ae7f5992ce1d187a39411c1ac9b763",
+          "phaseFrame": 360,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-84450e3aff4978a16a9be98bdf5f008d4e420a1a3bc31950fe1adf20883871bc.mp4",
+          "frames": 265,
+          "bytes": 8624889,
+          "sha256": "84450e3aff4978a16a9be98bdf5f008d4e420a1a3bc31950fe1adf20883871bc",
+          "phaseFrame": 420,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-576973a55b5829a8de73c1bee1d4319b23a51f3ba9e121de80f81b2af99ed5cc.mp4",
+          "frames": 265,
+          "bytes": 8628058,
+          "sha256": "576973a55b5829a8de73c1bee1d4319b23a51f3ba9e121de80f81b2af99ed5cc",
+          "phaseFrame": 480,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-554aa0bef525aa9e1eb8fd7867fa75a25230c04f366e6cc3f608545a824bccbf.mp4",
+          "frames": 265,
+          "bytes": 8613171,
+          "sha256": "554aa0bef525aa9e1eb8fd7867fa75a25230c04f366e6cc3f608545a824bccbf",
+          "phaseFrame": 540,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-2aca0fa25bf9b660c5229e91d18368420d16481b4324ccbcf60c2d316338fd69.mp4",
+          "frames": 265,
+          "bytes": 8628067,
+          "sha256": "2aca0fa25bf9b660c5229e91d18368420d16481b4324ccbcf60c2d316338fd69",
+          "phaseFrame": 600,
+          "resident": false
+        },
+        {
+          "src": "https://github.com/trojantrog/cqufsae-official/releases/download/vehicle-presentation-f88dfb34714f4b8a/video-e0afac9a025b1d64893215db5a76b355651d71f1b13aeaccdfe63d5157c086cb.mp4",
+          "frames": 265,
+          "bytes": 8610951,
+          "sha256": "e0afac9a025b1d64893215db5a76b355651d71f1b13aeaccdfe63d5157c086cb",
+          "phaseFrame": 660,
+          "resident": false
+        }
+      ],
+      "telemetrySrc": "systems/operations/telemetry.json"
+    }
+  },
+  "anchor": {
+    "poster": "anchor.png"
+  }
+}
