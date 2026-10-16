@@ -167,6 +167,18 @@ export class VideoNavigator {
         pending.releases.forEach(release => release()); this.surface.discardIncomplete(item); return;
       }
       const destination = this.target === 'all' ? null : await this.prepareTarget(this.target, valid);
+      // A pinned decoder can outlive an evicted browser cache. Restore the
+      // overview while the current system is still playing, before its exit.
+      if (this.target === 'all' && this.overview?.cachedLease && valid()) {
+        const overview = await this.surface.prepare(this.manifest.overview, {slot: 'overview', frame: 0, valid});
+        if (valid() && overview !== this.overview) {
+          this.unpinOverview?.(); this.overview = overview;
+          this.unpinOverview = this.surface.pin(overview);
+        }
+        if (valid() && !await this.surface.buffer(overview, valid)) {
+          pending.releases.forEach(release => release()); return;
+        }
+      }
       if (this.pending !== pending || token !== this.selection || this.phase !== 'loop') {
         pending.releases.forEach(release => release()); destination?.release(); return;
       }
@@ -199,7 +211,7 @@ export class VideoNavigator {
           pending.destination?.release();
           this.emit('overview');
           try { await this.surface.seek(this.overview, 0); this.surface.show(this.overview); await this.advance(); }
-          catch (error) { this.fail(error, async () => { await this.surface.seek(this.overview, 0); this.surface.show(this.overview); this.emit('overview'); await this.advance(); }); }
+          catch (error) { this.fail(error, async () => { await this.surface.reload(this.overview, 0); this.surface.show(this.overview); this.emit('overview'); await this.advance(); }); }
         }
       }, onError: this.onError
     });
