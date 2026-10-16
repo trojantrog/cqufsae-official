@@ -3,6 +3,7 @@ const TOKEN = '__cqu_video_cache';
 const MAX_ENTRIES = 12;
 const MAX_BYTES = 256 * 1024 * 1024;
 const DOWNLOAD_TIMEOUT = 180000;
+const BOOTSTRAP_TIMEOUT = 180000;
 const CONTROL_TIMEOUT = 20000;
 const entries = new Map();
 const pageId = crypto.randomUUID().replaceAll('-', '');
@@ -42,7 +43,7 @@ function waitFor(promise, signal, timeout = CONTROL_TIMEOUT) {
 
 async function connectClient() {
   if (!('serviceWorker' in navigator) || !('caches' in window) || !isSecureContext) throw unavailable();
-  await waitFor(navigator.serviceWorker.register(workerURL.href, {scope: new URL('./', workerURL).href, updateViaCache: 'none'}));
+  await waitFor(navigator.serviceWorker.register(workerURL.href, {scope: new URL('./', workerURL).href, updateViaCache: 'none'}), undefined, BOOTSTRAP_TIMEOUT);
   if (!ownController()) await new Promise((resolve, reject) => {
     const cleanup = () => { clearTimeout(timer); navigator.serviceWorker.removeEventListener('controllerchange', changed); };
     const changed = () => { if (ownController()) { cleanup(); resolve(); } };
@@ -90,10 +91,13 @@ function createEntry(source, bytes) {
   const entry = {source, key: key.href, bytes, refs: 0, controller: new AbortController(), task: null};
   entries.set(source, entry);
   entry.task = (async () => {
-    const timeout = setTimeout(() => { entry.timedOut = true; entry.controller.abort(); }, DOWNLOAD_TIMEOUT);
+    let timeout;
     try {
-      await waitFor(ensureClient(), entry.controller.signal, DOWNLOAD_TIMEOUT);
+      // Registration can need a network round trip on a first visit. Local
+      // control handshakes keep their short deadline; media gets its own budget.
+      await waitFor(ensureClient(), entry.controller.signal, BOOTSTRAP_TIMEOUT);
       if (!entry.refs || entry.controller.signal.aborted) throw aborted();
+      timeout = setTimeout(() => { entry.timedOut = true; entry.controller.abort(); }, DOWNLOAD_TIMEOUT);
       const response = await fetch(source, {mode: 'no-cors', credentials: 'omit', signal: entry.controller.signal});
       if (response.type !== 'opaque') throw unavailable();
       const cache = await caches.open(cacheName);
