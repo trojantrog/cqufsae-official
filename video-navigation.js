@@ -88,21 +88,33 @@ export class VideoNavigator {
     }});
   }
 
-  async prepareTarget(id, valid = () => true) {
+  async prepareTarget(id, valid = () => true, adopt = () => {}) {
     if (id === 'all') return null;
     const system = this.manifest.systems[id];
-    const entry = await this.surface.prepare(system.enter, {slot: `enter-${id}`, valid});
-    const unpinEntry = this.surface.pin(entry);
-    let loop, unpinLoop;
-    const prepared = {id, entry, loop: null, release: () => {
-      unpinEntry(); unpinLoop?.();
-      this.surface.discardIncomplete(entry); this.surface.discardIncomplete(loop);
+    const releases = []; let released = false;
+    const prepared = {id, entry: null, loop: null, ready: false, release: () => {
+      released = true; prepared.ready = false; releases.forEach(release => release());
+      this.surface.discardIncomplete(prepared.entry); this.surface.discardIncomplete(prepared.loop);
     }};
+    // Expose ownership before either asynchronous branch can acquire a pin.
+    // A canceled selection releases ready media while late media stays unused.
+    adopt(prepared);
+    const wanted = () => !released && !this.disposed && valid();
+    const acquire = async (kind, clip, slot) => {
+      const item = await this.surface.prepare(clip, {slot, valid: wanted});
+      if (!wanted()) { this.surface.discardIncomplete(item); return false; }
+      prepared[kind] = item; releases.push(this.surface.pin(item));
+      if (!await this.surface.buffer(item, wanted) || !wanted()) { prepared.release(); return false; }
+      return true;
+    };
     try {
-      if (!valid()) return prepared;
-      loop = await this.surface.prepare(system.loop, {slot: `loop-${id}`, valid});
-      prepared.loop = loop; unpinLoop = this.surface.pin(loop);
-      if (await this.surface.buffer(entry, valid)) await this.surface.buffer(loop, valid);
+      if (!wanted()) { prepared.release(); return prepared; }
+      const results = await Promise.all([
+        acquire('entry', system.enter, `enter-${id}`),
+        acquire('loop', system.loop, `loop-${id}`)
+      ]);
+      prepared.ready = wanted() && results.every(Boolean);
+      if (!prepared.ready && valid() && !this.disposed) throw new Error('Media preparation did not complete');
       return prepared;
     } catch (error) { prepared.release(); throw error; }
   }
@@ -156,38 +168,61 @@ export class VideoNavigator {
   }
 
   async prepareExit() {
-    const id = this.current, token = this.selection, system = this.manifest.systems[id];
-    const clip = nextExit(system.exits, this.loopFrame, system.loop.frames, Math.round(this.manifest.fps * .45));
-    const pending = {clip, ready: false, token, releases: []}; this.pending = pending;
+    const id = this.current, target = this.target, token = this.selection, system = this.manifest.systems[id];
+    const ready = (clip, slot) => {
+      const item = this.surface.pool?.get(`${clip.src}#${slot}`);
+      return item?.ready && !item.buffering && !item.controller?.signal.aborted && this.surface.buffered(item);
+    };
+    const pending = {clip: null, ready: false, token, releases: []}; this.pending = pending;
+    const valid = () => this.pending === pending && token === this.selection && this.current === id && this.target === target && this.phase === 'loop' && !this.disposed && !this.reduced;
+    const release = () => {
+      pending.releases.forEach(unpin => unpin()); pending.destination?.release();
+      this.surface.discardIncomplete(pending.item);
+    };
     try {
-      const valid = () => this.pending === pending && token === this.selection && this.phase === 'loop' && !this.disposed;
+      // Reserve capacity before creating the two destination decoders and one
+      // exit decoder. Current playback and all owned items remain protected.
+      this.surface.trim?.(5);
+      const prepareDestination = async () => {
+        if (target !== 'all') {
+          const prepared = await this.prepareTarget(target, valid, value => { pending.destination = value; });
+          if (!prepared.ready) return false;
+        } else if (this.overview?.cachedLease && valid()) {
+          // A retained decoder can outlive an evicted browser cache. Restore
+          // the overview while the current loop is still visible.
+          const overview = await this.surface.prepare(this.manifest.overview, {slot: 'overview', frame: 0, valid});
+          if (!valid()) { this.surface.discardIncomplete(overview); return false; }
+          if (overview !== this.overview) {
+            this.unpinOverview?.(); this.overview = overview;
+            this.unpinOverview = this.surface.pin(overview);
+          }
+          if (!await this.surface.buffer(overview, valid)) return false;
+        }
+        return valid();
+      };
+      if (!await prepareDestination() || !valid()) {
+        if (this.pending === pending) this.pending = null;
+        release(); return;
+      }
+      // Choose the phase after the larger destination films are ready. Their
+      // download time cannot make us miss an exit chosen several seconds ago.
+      const near = nextExit(system.exits, this.loopFrame, system.loop.frames, Math.round(this.manifest.fps * .45));
+      const clip = ready(near, `exit-${id}`) ? near
+        : nextExit(system.exits, this.loopFrame, system.loop.frames, Math.round(this.manifest.fps * 3));
+      pending.clip = clip;
       const item = await this.surface.prepare(clip, {slot: `exit-${id}`, valid});
-      pending.releases.push(this.surface.pin(item));
-      if (!await this.surface.buffer(item, valid)) {
-        pending.releases.forEach(release => release()); this.surface.discardIncomplete(item); return;
+      if (!valid()) { this.surface.discardIncomplete(item); release(); return; }
+      pending.item = item; pending.releases.push(this.surface.pin(item));
+      if (!await this.surface.buffer(item, valid) || !valid()) {
+        if (this.pending === pending) this.pending = null;
+        release(); return;
       }
-      const destination = this.target === 'all' ? null : await this.prepareTarget(this.target, valid);
-      // A pinned decoder can outlive an evicted browser cache. Restore the
-      // overview while the current system is still playing, before its exit.
-      if (this.target === 'all' && this.overview?.cachedLease && valid()) {
-        const overview = await this.surface.prepare(this.manifest.overview, {slot: 'overview', frame: 0, valid});
-        if (valid() && overview !== this.overview) {
-          this.unpinOverview?.(); this.overview = overview;
-          this.unpinOverview = this.surface.pin(overview);
-        }
-        if (valid() && !await this.surface.buffer(overview, valid)) {
-          pending.releases.forEach(release => release()); return;
-        }
-      }
-      if (this.pending !== pending || token !== this.selection || this.phase !== 'loop') {
-        pending.releases.forEach(release => release()); destination?.release(); return;
-      }
-      pending.item = item; pending.destination = destination; pending.ready = true;
+      pending.ready = true;
     } catch (error) {
-      pending.releases.forEach(release => release());
-      if (this.pending === pending && token === this.selection && !this.disposed) {
-        this.pending = null; this.onError(error);
-      }
+      const report = valid();
+      if (this.pending === pending) this.pending = null;
+      release();
+      if (report) this.onError(error);
     }
   }
 
