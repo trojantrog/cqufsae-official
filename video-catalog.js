@@ -1,23 +1,266 @@
-// Shared public navigation content for the prerecorded presentation.
+// Department responsibilities shared with the model presentation.
 export const departments = {
-  all:{name:'一辆赛车的组成',copy:'查看部件的装配关系。选择部门，进入对应系统的工作演示。',tags:[],groups:[]},
-  chassis:{name:'底盘',copy:'悬架、转向与制动共同影响赛车的姿态、行驶方向和减速过程。',tags:['suspension','steering','brakes'],groups:['suspension','steering','brakes']},
-  structure:{name:'车身车架',copy:'车身组织赛车的外部形态，车架承载并连接各系统。',tags:['body','frame'],groups:['body','frame']},
-  power:{name:'动力总成',copy:'从动力来源到车轮，完成能量储存、动力输出与传递。',tags:['engine','transmission','ecu','battery','wiring'],groups:['transmission','engine','ecu','battery','wiring']},
-  driverless:{name:'无人',copy:'算法生成行驶路径，控制将规划结果转化为车辆运动。',tags:[],groups:['algorithm','control']},
-  operations:{name:'运营部',copy:'车队组织、活动策划、对外传播与资源协调贯穿整车项目。',tags:[],groups:[]}
+  "all": {
+    "name": "一辆赛车的组成",
+    "copy": "查看部件的装配关系。选择部门，进入对应系统的工作演示。",
+    "tags": [],
+    "groups": []
+  },
+  "chassis": {
+    "name": "底盘",
+    "copy": "悬架、转向与制动系统的设计、制造和调校。",
+    "tags": [
+      "suspension",
+      "steering",
+      "brakes"
+    ],
+    "groups": [
+      "suspension",
+      "steering",
+      "brakes"
+    ]
+  },
+  "structure": {
+    "name": "车身车架",
+    "copy": "车身气动设计、车架结构设计与座舱布置。",
+    "tags": [
+      "body",
+      "frame"
+    ],
+    "groups": [
+      "body",
+      "frame"
+    ]
+  },
+  "power": {
+    "name": "动力总成",
+    "copy": "动力系统的设计、制造、标定与整车匹配。",
+    "tags": [
+      "engine",
+      "transmission",
+      "ecu",
+      "battery",
+      "wiring"
+    ],
+    "groups": [
+      "transmission",
+      "engine",
+      "ecu",
+      "battery",
+      "wiring"
+    ]
+  },
+  "driverless": {
+    "name": "无人车部",
+    "copy": "无人驾驶算法、执行机构设计制造、车辆控制与系统安全。",
+    "tags": [],
+    "groups": [
+      "algorithm",
+      "control",
+      "safety"
+    ]
+  },
+  "operations": {
+    "name": "运营部",
+    "copy": "活动组织、宣传制作、对外合作与参赛后勤。",
+    "tags": [],
+    "groups": []
+  }
 };
 export const groups = {
-  suspension:{name:'悬架',department:'chassis',tags:['suspension'],copy:'围绕轮胎接地、悬架几何和车辆姿态，完成设计、装配与调试。',related:'对应摆臂、立柱、减振器及相关轮端部件。'},
-  steering:{name:'转向',department:'chassis',tags:['steering'],copy:'将驾驶员输入传递至车轮，协调转向传动关系和整车布置。',related:'对应方向盘、转向柱、转向机与横拉杆。'},
-  brakes:{name:'制动',department:'chassis',tags:['brakes'],copy:'通过制动踏板、液压系统与轮端机构实现减速。',related:'对应制动踏板、制动盘与卡钳的概括外形。'},
-  body:{name:'车身',department:'structure',tags:['body'],copy:'设计车身覆盖件及空气动力学外形，参与复合材料制作和安装。',related:'对应车身覆盖件、前后翼与底板。'},
-  frame:{name:'车架',department:'structure',tags:['frame'],copy:'围绕载荷、空间与安装关系设计承载结构，协调各系统布置。',related:'对应管架与座舱承载结构。'},
-  transmission:{name:'传动',department:'power',tags:['transmission'],copy:'把动力输出传递到车轮，完成传动机构的设计、布置与调试。',related:'对应主传动、差速器及半轴等驱动部件。'},
-  engine:{name:'发动机（油）',short:'发动机',department:'power',vehicle:'c41',tags:['engine'],copy:'围绕发动机、离合及进气、排气、冷却系统开展设计、标定和测试。',related:'查看发动机、离合操纵、进排气和冷却部件，观察内部机构的工作过程。'},
-  ecu:{name:'电控（电）',short:'电控',department:'power',vehicle:'e74',tags:['ecu'],copy:'完成车辆信号采集、系统通信与电控功能开发。',related:'观察电机控制器与电驱系统的联系。'},
-  battery:{name:'电池（电）',short:'电池',department:'power',vehicle:'e74',tags:['battery'],copy:'参与动力电池系统的设计、装配、管理和验证。',related:'箱体与上部板件逐渐透明，展示电芯排列、模组和连接件。'},
-  wiring:{name:'线路（电）',short:'线路',department:'power',vehicle:'e74',tags:['wiring'],copy:'设计并制作整车电气连接，完成线束布置与检查。',related:'通过局部开窗，观察高压盒内部元件与连接布置。'},
-  algorithm:{name:'算法',department:'driverless',tags:[],copy:'环境感知、定位与路径规划共同生成赛车的行驶路径。',related:'观察 A08 激光雷达、深度相机及其安装结构。'},
-  control:{name:'控制',department:'driverless',tags:[],copy:'将目标路径与速度转化为转向、驱动和制动指令。',related:'观察 A08 自动转向、制动执行机构与储气装置。'}
+  "suspension": {
+    "name": "悬架组",
+    "department": "chassis",
+    "tags": [
+      "suspension"
+    ],
+    "copy": "悬架引导车轮相对车架运动，传递轮胎载荷，控制车身振动与姿态。",
+    "related": "对应摆臂、立柱、减振器及相关轮端部件。",
+    "work": [
+      "设计摆臂、立柱与减振机构，校核零件受力",
+      "分析轮跳中的外倾、前束变化与运动干涉",
+      "开展车辆动力学仿真，分析轮胎载荷和车身姿态",
+      "完成装配、车轮定位测量与悬架调校"
+    ]
+  },
+  "steering": {
+    "name": "转向组",
+    "department": "chassis",
+    "tags": [
+      "steering"
+    ],
+    "copy": "转向柱、转向机与横拉杆传递方向盘输入，控制前轮转角。",
+    "related": "对应方向盘、转向柱、转向机与横拉杆。",
+    "work": [
+      "设计转向机构及安装结构，匹配转向传动比",
+      "分析轮跳与转向时的车轮角度变化",
+      "结合车辆动力学仿真，分析转向响应",
+      "装配调试，检查机构行程、间隙与运动干涉"
+    ]
+  },
+  "brakes": {
+    "name": "制动组",
+    "department": "chassis",
+    "tags": [
+      "brakes"
+    ],
+    "copy": "制动踏板驱动主缸建立液压，卡钳夹紧制动盘，产生车轮制动力矩。",
+    "related": "对应制动踏板、制动盘与卡钳的概括外形。",
+    "work": [
+      "设计制动踏板，选配主缸、卡钳与制动盘",
+      "结合车辆动力学仿真，匹配前后制动力",
+      "分析制动时的轮胎载荷与车身姿态",
+      "布置制动管路，完成装配与调试"
+    ]
+  },
+  "body": {
+    "name": "车身组",
+    "department": "structure",
+    "tags": [
+      "body"
+    ],
+    "copy": "车身、翼面与底板引导周围气流，影响下压力、空气阻力与冷却进风。",
+    "related": "对应车身覆盖件、前后翼与底板。",
+    "work": [
+      "设计车身、翼面、底板及安装结构",
+      "开展空气动力学仿真，分析流场分布",
+      "比较下压力、空气阻力与气动平衡，优化外形",
+      "制作模具，完成碳纤维铺层与装配"
+    ]
+  },
+  "frame": {
+    "name": "车架组",
+    "department": "structure",
+    "tags": [
+      "frame"
+    ],
+    "copy": "车架承受各系统传来的载荷，为零部件安装和驾驶员乘坐提供结构支撑。",
+    "related": "对应管架与座舱承载结构。",
+    "work": [
+      "布置杆件和安装节点，协调各系统安装空间",
+      "分析杆件、焊接节点与安装点的应力和变形，校核扭转刚度",
+      "开展人机工程设计，检查坐姿、视野、上下车空间及方向盘、踏板和安全带布置",
+      "完成下料、弯管、焊接与尺寸检查"
+    ]
+  },
+  "transmission": {
+    "name": "传动组",
+    "department": "power",
+    "tags": [
+      "transmission"
+    ],
+    "copy": "链传动、差速器与半轴向驱动轮传递扭矩，并适应两侧轮速差和悬架运动。",
+    "related": "对应主传动、差速器及半轴等驱动部件。",
+    "work": [
+      "设计链轮、差速器支撑与半轴连接",
+      "匹配传动比、动力输出与后轮扭矩",
+      "校核链传动、半轴和支撑结构受力",
+      "确定总成位置，调整链条张紧、对中与间隙"
+    ]
+  },
+  "engine": {
+    "name": "发动机组",
+    "short": "发动机",
+    "department": "power",
+    "vehicle": "c41",
+    "tags": [
+      "engine"
+    ],
+    "copy": "燃油、进排气、冷却与润滑系统共同支持发动机运行和动力输出。",
+    "related": "查看发动机、离合操纵、进排气和冷却部件，观察内部机构的工作过程。",
+    "work": [
+      "设计燃油、冷却、进排气与润滑系统",
+      "制作并安装油箱、进气箱、排气管、消声器及管路支架",
+      "开展供油、流动与散热仿真，匹配散热器和配套部件",
+      "开展台架喷油与点火标定，测量扭矩、功率和温度",
+      "完成装配调试，排查发动机运行故障"
+    ]
+  },
+  "ecu": {
+    "name": "电控组",
+    "short": "电控",
+    "department": "power",
+    "vehicle": "e74",
+    "tags": [
+      "ecu"
+    ],
+    "copy": "控制程序根据踏板输入与车辆状态生成扭矩请求，并协调电驱系统运行。",
+    "related": "观察电机控制器与电驱系统的联系。",
+    "work": [
+      "开发车辆控制程序，匹配扭矩请求与电机响应",
+      "完成控制器、仪表和传感器通信联调",
+      "调试电机、水泵等设备，结合整车表现调整参数"
+    ]
+  },
+  "battery": {
+    "name": "电池组",
+    "short": "电池",
+    "department": "power",
+    "vehicle": "e74",
+    "tags": [
+      "battery"
+    ],
+    "copy": "动力电池向电驱系统供电，电池管理系统采集电压、温度和电流。",
+    "related": "箱体与上部板件逐渐透明，展示电芯排列、模组和连接件。",
+    "work": [
+      "设计电池模组与箱体，完成电芯连接",
+      "集成电池管理系统，采集电压、温度和电流",
+      "分析电芯温升与模组温差，优化散热布置",
+      "检查模组固定、绝缘与装配质量"
+    ]
+  },
+  "wiring": {
+    "name": "线路组",
+    "short": "线路",
+    "department": "power",
+    "vehicle": "e74",
+    "tags": [
+      "wiring"
+    ],
+    "copy": "配电回路和线束连接电源、控制器与传感器，承担供电和信号传输。",
+    "related": "通过局部开窗，观察高压盒内部元件与连接布置。",
+    "work": [
+      "设计配电、线束与安全回路",
+      "选配接插件，制作并布置线束",
+      "检查供电、信号、连接与绝缘，验证安全关断"
+    ]
+  },
+  "algorithm": {
+    "name": "算法组",
+    "department": "driverless",
+    "tags": [],
+    "copy": "无人驾驶算法处理感知信息，为车辆自主行驶提供控制所需的输入。",
+    "related": "观察 A08 激光雷达、深度相机及其安装结构。",
+    "work": [
+      "开发无人驾驶算法，处理传感器信息",
+      "调试程序，结合传感器数据检查算法输出",
+      "开展整车联调，检验自主行驶表现"
+    ]
+  },
+  "control": {
+    "name": "控制组",
+    "department": "driverless",
+    "tags": [],
+    "copy": "设计制造自动转向与制动执行机构，包括传动连接、电机支架、踏板连接和安装结构，并完成加工装配、控制开发与实车调试。",
+    "related": "观察自动转向、制动执行机构及安装连接。",
+    "work": [
+      "设计自动转向机构、传动连接与电机安装支架",
+      "设计制动执行机构、踏板连接与安装结构",
+      "完成零件加工与装配，检查行程、间隙和运动干涉",
+      "开发转向、加速与制动控制程序，结合实车响应调试参数"
+    ]
+  },
+  "safety": {
+    "department": "driverless",
+    "tags": [],
+    "name": "系统安全组",
+    "copy": "开展无人赛车安全系统的设计与验证，工作包括安全回路、EBS 紧急制动等。",
+    "work": [
+      "分析系统故障风险，设计安全处置方案",
+      "设计并验证安全回路，检查急停与驱动关断",
+      "开发并调试 EBS 紧急制动系统",
+      "开展整车安全联调，检查故障检测与响应"
+    ],
+    "related": "安全回路、EBS 紧急制动及整车安全联调。"
+  }
 };

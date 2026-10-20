@@ -1,6 +1,6 @@
 import {VideoSurface} from './video-media.js?v=753';
 import {VideoNavigator} from './video-navigation.js?v=753';
-import {departments, groups} from './video-catalog.js?v=753';
+import {departments, groups} from './video-catalog.js?v=777';
 import {storyPosition} from './showcase-scroll.js?v=743';
 
 const $ = selector => document.querySelector(selector);
@@ -20,6 +20,7 @@ const reduced = () => {
 function clipId() {
   const {department, group, variant} = selection;
   if (department === 'power') return !group ? `${variant}-power` : group === 'transmission' ? `${variant}-transmission` : group;
+  if (group === 'safety') return 'driverless';
   return group || department;
 }
 
