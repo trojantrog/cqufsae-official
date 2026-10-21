@@ -371,7 +371,7 @@ function showGroups(){
   if(focusedGroup){const replacement=Array.from(container.children).find(b=>b.dataset.group===focusedGroup);replacement?.focus({preventScroll:true});}
 }
 async function navigateSystem(nextDepartment,nextGroup=null,nextCar=null){
-  if(!loaded||!meshes.length){if(presentation)pendingPresentationSelection={nextDepartment,nextGroup,nextCar};return;}
+  if(!loaded||!meshes.length||!fallback.hidden){if(presentation)pendingPresentationSelection={nextDepartment,nextGroup,nextCar};return;}
   const priorVariant=powerVariant;
   const token=++navigation;playing=false;flightCamera=null;finishFlight?.(false);finishFlight=null;viewTween=null;++revision;loading.hidden=true;
   if(programPreparation){await programPreparation;if(token!==navigation)return;}
@@ -471,7 +471,7 @@ function updateFieldLegend(condition){
 
 function render(now){
   const elapsed=(now-previous)/1000,dt=Math.min(.15,elapsed);previous=now;
-  if(shaderPreparing)return;
+  if(shaderPreparing||!fallback.hidden)return;
   if(showcase&&!showcase.visible())return;
   stage.dataset.visibility=document.visibilityState;
   if(loaded&&elapsed>0){frameDurations.push(elapsed*1000);if(frameDurations.length>120)frameDurations.shift();if(frameDurations.length%15===0){stage.dataset.frameMs=(frameDurations.reduce((a,b)=>a+b,0)/frameDurations.length).toFixed(1);stage.dataset.frameMaxMs=Math.max(...frameDurations).toFixed(1);}}

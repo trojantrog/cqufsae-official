@@ -201,6 +201,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   -webkit-mask-image: linear-gradient(to bottom, #000 96%, transparent);
   mask-image: linear-gradient(to bottom, #000 96%, transparent);
 }
+.showcase-sticky:has(.ex-stage[data-model-poster]:not([data-model-painted='true'])) :is(.showcase-info, .work-labels, .condition-readout, .flow-legend) { display: none; }
+.ex-stage:has(#model-fallback:not([hidden])) { z-index: 7; pointer-events: none; }
+.showcase-sticky .ex-stage[data-model-poster] .ex-fallback { pointer-events: none; }
+.showcase-sticky .ex-stage[data-model-poster] .ex-fallback button { pointer-events: auto; }
 @media (prefers-reduced-motion: reduce) {
   .ex-stage[data-model-poster] #vehicle-canvas, .ex-stage[data-model-poster] .model-poster { transition: none; }
 }

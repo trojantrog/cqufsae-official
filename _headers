@@ -4,7 +4,7 @@
   Cache-Control: no-cache
 /release-manifest.json
   Cache-Control: no-cache
-/releases/d893dae94a84f89dd036/*
+/releases/8540ffb50292c4f0b82e/*
   Cache-Control: public, max-age=31536000, immutable
   Access-Control-Allow-Origin: *
   Cross-Origin-Resource-Policy: cross-origin
