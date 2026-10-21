@@ -4,7 +4,7 @@ export function resourceCandidates(input){
  if(url.protocol==='https:'&&url.hostname==='cqufsae.cn'&&match){
   const relative=url.pathname.slice(match[0].length),reuse=globalThis.__CQUFSAE_CDN_REUSE__;
   const pack=globalThis.__CQUFSAE_CDN_PACKS__?.[relative];
-  if(typeof pack==='string'&&/^asset-[a-f0-9]{20}$/.test(pack)){
+  if(typeof pack==='string'&&/^asset(?:2)?-[a-f0-9]{20}$/.test(pack)){
    const path='/gh/trojantrog/cqufsae-official@'+pack+'/files/'+relative;
    return ['https://cdn.jsdelivr.net'+path,'https://fastly.jsdelivr.net'+path,url.href];
   }
