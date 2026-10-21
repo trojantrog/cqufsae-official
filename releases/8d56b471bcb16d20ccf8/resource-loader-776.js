@@ -1,4 +1,5 @@
 import {sha256} from './asset-checksum-767.js';
+import {resourceCandidates,readTransfer,verifiedCache} from './transfer-780.js';
 
 const root=new URL('./',import.meta.url);
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
@@ -28,10 +29,11 @@ async function inflateChunk(buffer,length){
  }finally{await reader.cancel().catch(()=>{});reader.releaseLock();}
 }
 
-export function createAssetLoader({manifestURL=new URL('./model-stream-776/manifest.json',import.meta.url),baseURL=root,fetchImpl=globalThis.fetch.bind(globalThis),digest=sha256,nativeIntegrity=typeof Request==='function'&&'integrity'in Request.prototype,timeoutMs=30000,attempts=3,concurrency=4,retryDelay=500}={}){
- let manifestPromise,active=0,disposed=false,completed=0,total=0,retries=0,listener=()=>{};
+export function createAssetLoader({manifestURL=new URL('./model-stream-776/manifest.json',import.meta.url),baseURL=root,fetchImpl=globalThis.fetch.bind(globalThis),digest=sha256,nativeIntegrity=true,timeoutMs=20000,attempts=4,concurrency=4,retryDelay=350,candidates=resourceCandidates,cache=verifiedCache()}={}){
+ let manifestPromise,active=0,disposed=false,completed=0,total=0,retries=0,received=0,cacheHits=0,resumedBytes=0,listener=()=>{};
  const pending=new Map(),queue=[],controllers=new Set(),registered=new Set(),completedChunks=new Set(),verifiedBuffers=new WeakMap();
- const status=()=>({completed,total,active,retries,queued:queue.length});
+ const partialProgress=new Map();
+ const status=()=>({completed,total,active,retries,received,cacheHits,resumedBytes,progress:Math.min(total,completed+[...partialProgress.values()].reduce((a,b)=>a+b,0)),queued:queue.length});
  const emit=()=>listener(status());
  function schedule(task){
   return new Promise((resolve,reject)=>{queue.push({task,resolve,reject});drain();});
@@ -46,19 +48,56 @@ export function createAssetLoader({manifestURL=new URL('./model-stream-776/manif
   if(pending.has(key))return pending.get(key);
   const result=task().finally(()=>pending.delete(key));pending.set(key,result);return result;
  }
- async function request(input,decode,integrity){
-  const url=new URL(input,baseURL);
+ async function request(input,decode,integrity,options={}){
+  const url=new URL(input,baseURL),sources=candidates(url),hash=integrity?Array.from(atob(integrity.slice(7)),c=>c.charCodeAt(0).toString(16).padStart(2,'0')).join(''):null;
+  const responseFor=(bytes,type)=>new Response(bytes,{headers:{'Content-Type':type||'application/octet-stream'}});
+  if(hash){
+   const cached=await cache.get(hash);
+   if(cached){
+    if(cached.length===options.expectedBytes&&await digest(cached)===hash){cacheHits++;emit();return decode(responseFor(cached));}
+    await cache.delete(hash);
+   }
+  }
+  let partial=new Uint8Array(0),partialSource=null;
   for(let attempt=0;attempt<attempts;attempt++){
    if(disposed)throw new Error('资源读取已结束。');
    try{return await schedule(async()=>{
     const controller=new AbortController();controllers.add(controller);
-    const timer=setTimeout(()=>controller.abort(),timeoutMs);
+    const source=partial.length?partialSource:sources[attempt%sources.length];
+    const requestId=Symbol();let timer,lastSize=partial.length;
+    const touch=(ms=timeoutMs)=>{clearTimeout(timer);timer=setTimeout(()=>controller.abort(),ms);};
+    touch(Math.min(timeoutMs,12000));
+    const hardLimit=setTimeout(()=>controller.abort(),600000);
     try{
-     const response=await fetchImpl(url,{signal:controller.signal,cache:attempt?'reload':'default',...(integrity?{integrity}:{})});
-     if(!response.ok){const error=new Error('资源读取失败，请稍后重试。');error.retryable=retryable(response.status);await response.body?.cancel();throw error;}
-     return await decode(response);
-    }finally{clearTimeout(timer);controllers.delete(controller);}
+     // Hash after streaming: native fetch SRI buffers the body before exposing progress.
+     const response=await fetchImpl(source,{signal:controller.signal,cache:attempt?'reload':'default',...(partial.length?{headers:{Range:'bytes='+partial.length+'-'}}:{})});
+     if(!response.ok){const error=new Error('资源读取失败，请稍后重试。');error.retryable=retryable(response.status)||(sources.length>1&&source!==url.href);await response.body?.cancel();throw error;}
+     let prefix=new Uint8Array(0);
+     if(response.status===206){
+      const range=response.headers.get('Content-Range')?.match(/^bytes (\d+)-(\d+)\/(\d+)$/);
+      if(!partial.length||!range||Number(range[1])!==partial.length||Number(range[3])!==options.expectedBytes){await response.body?.cancel();partial=new Uint8Array(0);throw new Error('模型资源分段异常，正在重试。');}
+      prefix=partial;resumedBytes+=partial.length;
+     }else{partial=new Uint8Array(0);lastSize=0;}
+     touch();
+     let bytes;
+     try{bytes=await readTransfer(response,{signal:controller.signal,prefix,limit:options.expectedBytes||536870912,touch,onProgress:size=>{
+      received+=Math.max(0,size-lastSize);lastSize=size;
+      if(options.rawBytes)partialProgress.set(requestId,size/options.expectedBytes*options.rawBytes);
+      emit();
+     }});}catch(error){
+      // Explicit gzip model files support byte ranges; other HTTP encodings do not.
+      if(hash&&options.expectedBytes&&!response.headers.get('Content-Encoding')&&error.partialBytes?.length<options.expectedBytes){partial=error.partialBytes;partialSource=source;}
+      delete error.partialBytes;throw error;
+     }
+     partial=new Uint8Array(0);
+     if(options.expectedBytes&&bytes.length!==options.expectedBytes)throw new Error('模型资源传输不完整，正在重试。');
+     if(hash&&await digest(bytes)!==hash)throw new Error('模型资源校验失败，正在重试。');
+     const value=await decode(responseFor(bytes,response.headers.get('Content-Type')));
+     if(hash)await cache.put(hash,bytes);
+     return value;
+    }finally{clearTimeout(timer);clearTimeout(hardLimit);controllers.delete(controller);partialProgress.delete(requestId);}
    });}catch(error){
+    if(partial.length&&attempt>0){partial=new Uint8Array(0);partialSource=null;}
     if(disposed||error.retryable===false||attempt===attempts-1)throw error;
     retries++;emit();await sleep(retryDelay*(attempt+1));
    }
@@ -96,15 +135,15 @@ export function createAssetLoader({manifestURL=new URL('./model-stream-776/manif
      const index=next++;if(index>=record.chunks.length)return;
      const chunk=record.chunks[index];
      const transportHash=compressed?chunk.encodedSHA256:chunk.sha256;
-     const integrity=nativeIntegrity?'sha256-'+btoa(String.fromCharCode(...transportHash.match(/../g).map(value=>parseInt(value,16)))):null;
+     const integrity='sha256-'+btoa(String.fromCharCode(...transportHash.match(/../g).map(value=>parseInt(value,16))));
      const decoded=await request(new URL(chunk.file,manifestURL),async response=>{
       let encoded=await response.arrayBuffer();
       if(encoded.byteLength!==(compressed?chunk.encodedBytes:chunk.bytes))throw new Error('模型资源传输不完整，正在重试。');
       if(compressed)encoded=await inflateChunk(encoded,chunk.bytes);
       const bytes=unshuffleBytes(encoded);
-      if(!nativeIntegrity&&await digest(bytes)!==chunk.decodedSHA256)throw new Error('模型资源校验失败，正在重试。');
+      if(await digest(bytes)!==chunk.decodedSHA256)throw new Error('模型资源校验失败，正在重试。');
       return bytes;
-     },integrity);
+     },integrity,{expectedBytes:compressed?chunk.encodedBytes:chunk.bytes,rawBytes:chunk.bytes});
      result.set(decoded,chunk.offset);
      const chunkKey=key+':'+index;
      if(!completedChunks.has(chunkKey)){completedChunks.add(chunkKey);completed+=chunk.bytes;emit();}

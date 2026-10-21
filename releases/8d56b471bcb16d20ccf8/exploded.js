@@ -37,9 +37,9 @@ const workLabels = createWorkLabels($('#work-labels'),{getObstacles:()=>{const p
 const range = $('#explosion-progress'), value = $('#explosion-value');
 const loading = $('#model-loading'), fallback = $('#model-fallback');
 const loadingText=text=>{if(loading.firstChild)loading.firstChild.textContent=text;};
-assetLoader.subscribe(({completed,total,active,retries})=>{
-  stage.dataset.assetProgress=JSON.stringify({completed,total,active,retries});
-  if(!loading.hidden&&total>0&&completed<total)loadingText(`正在加载模型 · ${Math.floor(completed/total*100)}%`);
+assetLoader.subscribe(status=>{
+  const {completed,total,progress}=status;stage.dataset.assetProgress=JSON.stringify(status);
+  if(!loading.hidden&&total>0&&completed<total)loadingText(`正在加载模型 · ${Math.min(99,Math.floor(progress/total*100))}%`);
 });
 window.addEventListener('pagehide',event=>{if(!event.persisted)assetLoader.dispose();});
 const reducedSystem = matchMedia('(prefers-reduced-motion: reduce)');
@@ -574,4 +574,5 @@ reducedSystem.addEventListener('change',motionPreference);motionPreference();
 addEventListener('storage',event=>{if(event.key==='cqufsae-reduce-motion'){manualReduced=event.newValue==='1';motionPreference();}});
 if(presentation)document.addEventListener('motionpreference',()=>{try{manualReduced=localStorage.getItem('cqufsae-reduce-motion')==='1';}catch{}motionPreference();});
 document.addEventListener('visibilitychange',()=>{if(document.hidden&&playing){playing=false;finishFlight?.(false);finishFlight=null;$('#play-explosion').innerHTML='<span aria-hidden="true">↗</span> 继续展开';}});
+if(reviewEnabled)window.inspectionQA={get loaded(){return loaded},get director(){return director},get renderer(){return renderer},get camera(){return camera},get rig(){return sectionRig},get labels(){return workLabels},get context(){return contextGeometry},get meshes(){return meshes},get loader(){return assetLoader},navigate:navigateSystem};
 try{init();await loadCar('c41');if(pendingPresentationSelection){const request=pendingPresentationSelection;pendingPresentationSelection=null;navigateSystem(request.nextDepartment,request.nextGroup,request.nextCar);}}catch(error){showError('三维画面初始化失败，请重新加载或使用支持 WebGL 的桌面浏览器。');console.error('3D view unavailable',error);}
