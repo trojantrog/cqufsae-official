@@ -1,0 +1,35 @@
+:root{--paper:#eeece5;--ink:#161716;--red:#dc2528}
+html{scrollbar-gutter:stable;background:var(--paper)}
+html.intro-pending,html:has(body.intro-playing){background:var(--intro-canvas,#101111)}
+.intro-pending body{background:#101111}
+.intro-pending .site-header,.intro-pending main,.intro-pending footer{visibility:hidden}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Microsoft YaHei","PingFang SC",sans-serif}
+.site-header{height:86px;padding:0 3.5vw;display:flex;align-items:center;justify-content:space-between;position:absolute;inset:0 0 auto;z-index:20;border-bottom:1px solid #16171624}
+.brand{width:142px;display:block;line-height:0;flex:none;color:var(--ink)}
+.brand svg{width:100%;height:auto;overflow:visible}
+.brand .logo-shape{fill:var(--ink)}
+.brand .logo-bolt{fill:var(--red)}
+.site-nav{display:flex;align-items:center;gap:34px;font-size:12px;font-weight:600}
+.site-nav a{color:inherit;text-decoration:none;padding:12px 0}
+.site-nav a:last-child{border-bottom:1px solid var(--ink)}
+.site-nav a:hover{color:var(--red)}
+.skip-content{position:fixed;left:16px;top:-100px;z-index:200;background:var(--paper);color:var(--ink);padding:12px 20px}
+.skip-content:focus{top:16px}
+:focus-visible{outline:2px solid var(--red);outline-offset:6px}
+.intro-layer{position:fixed;inset:0 auto 0 0;width:100vw;z-index:100;overflow:hidden;isolation:isolate}
+.intro-layer[hidden]{display:none}
+.intro-backdrop{position:absolute;inset:0;background:#101111;will-change:opacity}
+.intro-emblem{position:absolute;left:0;top:0;width:540px;line-height:0;transform-origin:0 0;will-change:transform,opacity;--logo-tone:#e9e8e3;--bolt-tone:#e9e8e3}
+.intro-emblem>svg{width:100%;height:auto;overflow:visible;display:block}
+.intro-emblem .logo-shape{fill:var(--logo-tone)}
+#intro-car-silhouette{fill:var(--curve-tone,var(--logo-tone))}
+.intro-emblem .logo-bolt{fill:var(--bolt-tone)}
+.intro-glint,.intro-halo{opacity:0}
+.intro-skip{position:absolute;bottom:35px;right:3.5vw;background:none;border:0;border-bottom:1px solid #b8b8b350;color:#b8b8b3;font:11px "Microsoft YaHei",sans-serif;padding:9px 0;cursor:pointer;letter-spacing:.08em}
+.intro-skip:hover{color:white;border-color:white}
+.intro-playing{overflow:hidden}
+.intro-playing .brand>svg{visibility:hidden}
+.intro-playing .site-nav{opacity:0}
+.intro-complete .site-nav{transition:opacity .45s ease;opacity:1}
+@media(max-width:650px){.site-header{height:70px;padding:0 22px}.brand{width:112px}.site-nav{gap:20px;font-size:11px}.site-nav a:nth-child(1),.site-nav a:nth-child(2){display:none}.intro-skip{bottom:28px;right:24px}}
+@media(prefers-reduced-motion:reduce){.intro-layer{display:none!important}.intro-playing{overflow:visible}.intro-playing .brand>svg{visibility:visible}.intro-playing .site-nav{opacity:1}}

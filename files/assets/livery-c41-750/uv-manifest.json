@@ -1,0 +1,165 @@
+{
+  "version": 750,
+  "objects": [
+    {
+      "id": "body-003-near",
+      "sourceVertices": 188490,
+      "vertices": 188490,
+      "triangles": 62830,
+      "atlasSize": [
+        4848,
+        4300
+      ],
+      "binary": "body-003-near-uv.bin",
+      "attributes": {
+        "append": {
+          "byteOffset": 0,
+          "count": 0,
+          "type": "uint32"
+        },
+        "uv": {
+          "byteOffset": 0,
+          "count": 376980,
+          "type": "float32"
+        },
+        "index": {
+          "byteOffset": 1507920,
+          "count": 188490,
+          "type": "uint32"
+        }
+      },
+      "sha256": "679a52e20a29b6cef9b5c040173a3c744214992c8d8adeaf4cdd5528ce9b5864",
+      "sourceTriangleOrderPreserved": true,
+      "sourceVertexIdsPreserved": true,
+      "seconds": 24.03
+    },
+    {
+      "id": "body-003-far",
+      "sourceVertices": 184860,
+      "vertices": 184860,
+      "triangles": 61620,
+      "atlasSize": [
+        4672,
+        4852
+      ],
+      "binary": "body-003-far-uv.bin",
+      "attributes": {
+        "append": {
+          "byteOffset": 0,
+          "count": 0,
+          "type": "uint32"
+        },
+        "uv": {
+          "byteOffset": 0,
+          "count": 369720,
+          "type": "float32"
+        },
+        "index": {
+          "byteOffset": 1478880,
+          "count": 184860,
+          "type": "uint32"
+        }
+      },
+      "sha256": "ad65dca3a2a828d1f899aa2a3ae103d3423775b8db35feab15b31065ce19f983",
+      "sourceTriangleOrderPreserved": true,
+      "sourceVertexIdsPreserved": true,
+      "seconds": 23.61
+    },
+    {
+      "id": "body-004",
+      "sourceVertices": 75705,
+      "vertices": 99181,
+      "triangles": 148106,
+      "atlasSize": [
+        4956,
+        4952
+      ],
+      "binary": "body-004-uv.bin",
+      "attributes": {
+        "append": {
+          "byteOffset": 0,
+          "count": 23476,
+          "type": "uint32"
+        },
+        "uv": {
+          "byteOffset": 93904,
+          "count": 198362,
+          "type": "float32"
+        },
+        "index": {
+          "byteOffset": 887352,
+          "count": 444318,
+          "type": "uint32"
+        }
+      },
+      "sha256": "a63680804a01ce2560ab66685c82abcbca315cbf4ea60c7ac037b029a1f6c1c7",
+      "sourceTriangleOrderPreserved": true,
+      "sourceVertexIdsPreserved": true,
+      "seconds": 15.0
+    },
+    {
+      "id": "body-005",
+      "sourceVertices": 20011,
+      "vertices": 22219,
+      "triangles": 38640,
+      "atlasSize": [
+        3668,
+        4388
+      ],
+      "binary": "body-005-uv.bin",
+      "attributes": {
+        "append": {
+          "byteOffset": 0,
+          "count": 2208,
+          "type": "uint32"
+        },
+        "uv": {
+          "byteOffset": 8832,
+          "count": 44438,
+          "type": "float32"
+        },
+        "index": {
+          "byteOffset": 186584,
+          "count": 115920,
+          "type": "uint32"
+        }
+      },
+      "sha256": "a0b5c315668c36915dd9252fcfffd04f3e93f56fe520052eb441d8b2c4512fbe",
+      "sourceTriangleOrderPreserved": true,
+      "sourceVertexIdsPreserved": true,
+      "seconds": 3.14
+    },
+    {
+      "id": "body-006",
+      "sourceVertices": 4431,
+      "vertices": 4457,
+      "triangles": 6418,
+      "atlasSize": [
+        2616,
+        2560
+      ],
+      "binary": "body-006-uv.bin",
+      "attributes": {
+        "append": {
+          "byteOffset": 0,
+          "count": 26,
+          "type": "uint32"
+        },
+        "uv": {
+          "byteOffset": 104,
+          "count": 8914,
+          "type": "float32"
+        },
+        "index": {
+          "byteOffset": 35760,
+          "count": 19254,
+          "type": "uint32"
+        }
+      },
+      "sha256": "1c628341fa04408d668a5fced2aeaa0d64f84c7885035b4930feeaa5dc20fce1",
+      "sourceTriangleOrderPreserved": true,
+      "sourceVertexIdsPreserved": true,
+      "seconds": 0.72
+    }
+  ]
+}
