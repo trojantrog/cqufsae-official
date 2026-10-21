@@ -165,8 +165,14 @@ export function createAssetLoader({manifestURL=new URL('./model-stream-782/manif
 export const assetLoader=createAssetLoader();
 export const loadBinary=input=>assetLoader.binary(input);
 export const loadJSON=input=>assetLoader.json(input);
+const textureBlobs=new Map();
 export async function loadTexture(loader,input){
- const blob=await assetLoader.request(input,response=>response.blob());
+ // Several native and baked materials share identical artwork. Reuse bytes,
+ // while retaining separate Texture instances and their own UV/flipY settings.
+ const identity=resourceCandidates(new URL(input,root))[0];
+ let pending=textureBlobs.get(identity);
+ if(!pending){pending=assetLoader.request(input,response=>response.blob());textureBlobs.set(identity,pending);pending.catch(()=>{if(textureBlobs.get(identity)===pending)textureBlobs.delete(identity);});}
+ const blob=await pending;
  const url=URL.createObjectURL(blob);
  try{return await loader.loadAsync(url);}finally{URL.revokeObjectURL(url);}
 }

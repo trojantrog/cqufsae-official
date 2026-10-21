@@ -23,7 +23,7 @@ export function createC41Livery(renderer,{environment=()=>null}={}){
  const json=file=>loadJSON(url(file));
  function ready(){return loading??=Promise.all([json('uv-manifest.json'),json('rear-wing-uv-groups.json')]).then(async([manifest,groups])=>{
   wing=groups;
-  for(const data of manifest.objects){
+  const results=await Promise.allSettled(manifest.objects.map(async data=>{
    if(!ids.includes(data.id))throw new Error('Livery part identity');
    const [buffer,map]=await Promise.all([loadBinary(url(data.binary)),loadTexture(loader,url(data.id+'-base.png'))]);
    const a=data.attributes;
@@ -34,7 +34,8 @@ export function createC41Livery(renderer,{environment=()=>null}={}){
    map.name='C41 baked '+data.id;map.colorSpace=T.SRGBColorSpace;map.anisotropy=anisotropy;
    map.wrapS=map.wrapT=T.ClampToEdgeWrapping;
    entries.set(data.id,{data,append,uv,indices,map});
-  }
+  }));
+  const failed=results.find(result=>result.status==='rejected');if(failed)throw failed.reason;
  }).catch(error=>{for(const {map} of entries.values())map.dispose();entries.clear();loading=null;throw error;});}
  function apply(material,data,geometry){
   const entry=entries.get(data.id);
