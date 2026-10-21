@@ -66,7 +66,7 @@ export function createAssetLoader({manifestURL=new URL('./model-stream-776/manif
     const source=partial.length?partialSource:sources[attempt%sources.length];
     const requestId=Symbol();let timer,lastSize=partial.length;
     const touch=(ms=timeoutMs)=>{clearTimeout(timer);timer=setTimeout(()=>controller.abort(),ms);};
-    touch(Math.min(timeoutMs,12000));
+    touch();
     const hardLimit=setTimeout(()=>controller.abort(),600000);
     try{
      // Hash after streaming: native fetch SRI buffers the body before exposing progress.

@@ -2,7 +2,10 @@
 export function resourceCandidates(input){
  const url=new URL(input),match=url.pathname.match(/^\/releases\/([a-f0-9]{20})\//);
  if(url.protocol==='https:'&&url.hostname==='cqufsae.cn'&&match){
-  return ['https://cdn.jsdelivr.net/gh/trojantrog/cqufsae-official@web-'+match[1]+url.pathname,url.href];
+  const relative=url.pathname.slice(match[0].length),reuse=globalThis.__CQUFSAE_CDN_REUSE__;
+  const release=reuse&&/^[a-f0-9]{20}$/.test(reuse.releaseId)&&reuse.paths?.includes(relative)?reuse.releaseId:match[1];
+  const path='/gh/trojantrog/cqufsae-official@web-'+release+'/releases/'+release+'/'+relative;
+  return ['https://cdn.jsdelivr.net'+path,'https://fastly.jsdelivr.net'+path,url.href];
  }
  return [url.href];
 }
