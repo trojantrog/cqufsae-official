@@ -1,0 +1,16 @@
+@import url('./recruitment-772.css?v=772');
+
+.component-note-work { margin-top: 10px; padding-top: 9px; }
+.component-note-tasks { gap: 4px; }
+@media (min-width:1051px) and (min-height:551px) {
+  .showcase-sticky .ex-stage .ex-fallback {
+    inset: 100px var(--gutter) 170px;
+    background: transparent;
+  }
+  .explorer[data-mode='system'][data-annotation-layout='none'] .showcase-info {
+    width: clamp(310px,23vw,360px); max-width: calc(100% - 2 * var(--gutter)); padding: 18px 20px;
+  }
+  .explorer[data-mode='system'][data-annotation-layout='none'] .selection-work {
+    font-size: 12px; line-height: 1.75; gap: 8px;
+  }
+}

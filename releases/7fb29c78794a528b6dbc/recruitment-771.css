@@ -1,0 +1,136 @@
+/* Recruitment notes share the car's quiet grey, red and glass finishes. */
+:root {
+  --note-ink: #202b30;
+  --note-body: #45565e;
+  --note-accent: #bc2933;
+  --note-border: #ffffff75;
+  --note-glass: #e9f2f224;
+}
+.work-labels.recruitment-annotations { overflow: visible; z-index: 6; }
+.annotation-leaders { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.annotation-leader { fill: none; stroke: #6a7c84; stroke-width: 1; stroke-opacity: .52; vector-effect: non-scaling-stroke; }
+.annotation-point { fill: var(--note-accent); stroke: #fff; stroke-width: 1.4; }
+.annotation-point-ring { fill: none; stroke: var(--note-accent); stroke-width: 1; stroke-opacity: .23; }
+.annotation-tray { position: absolute; inset: 0; pointer-events: none; }
+.component-note {
+  position: absolute; top: 0; left: 0; width: var(--annotation-width,290px);
+  padding: 16px 20px 17px; border: 1px solid var(--note-border); border-radius: 11px;
+  background: linear-gradient(135deg,#ffffff47,var(--note-glass));
+  backdrop-filter: blur(40px) saturate(150%); -webkit-backdrop-filter: blur(40px) saturate(150%);
+  box-shadow: 0 10px 30px #20384008,inset 0 1px 0 #ffffffa6,inset 0 -1px 0 #ffffff40;
+  color: var(--note-ink); opacity: 0; visibility: hidden; pointer-events: auto;
+  transition: transform .32s cubic-bezier(.2,.7,.2,1); contain: layout style;
+}
+.component-note::before { content: ''; position: absolute; left: -1px; top: 25px; width: 3px; height: 29px; border-radius: 0 2px 2px 0; background: var(--note-accent); }
+.component-note-system { margin: 0 0 5px; color: var(--note-accent); font-size: 11px; font-weight: 600; line-height: 1.5; letter-spacing: .09em; }
+.component-note-title { margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -.03em; line-height: 1.35; }
+.component-note-purpose { margin: 8px 0 0; color: var(--note-body); font-size: 13px; line-height: 1.7; text-wrap: pretty; }
+.component-note-work { margin-top: 11px; padding-top: 10px; border-top: 1px solid #70838b28; }
+.component-note-caption { color: #56676f; font-size: 10px; font-weight: 500; letter-spacing: .1em; line-height: 1.6; margin: 0 0 5px; }
+.component-note-tasks { display: grid; gap: 4px; margin: 0; padding: 0; list-style: none; font-size: 12px; line-height: 1.6; color: #293e47; }
+.component-note-tasks > li { position: relative; padding-left: 10px; }
+.component-note-tasks > li::before { content: ''; position: absolute; width: 3px; height: 3px; left: 0; top: .7em; border-radius: 50%; background: #8c9ba0; }
+.component-note-tasks > .component-note-system-task { display: grid; grid-template-columns: 30px 1fr; gap: 10px; padding: 0; }
+.component-note-system-task::before { display: none; }
+.component-note-system-task b { font-size: 11px; font-weight: 500; color: #56676f; }
+.component-note:focus-visible { outline: 2px solid var(--note-accent); outline-offset: -3px; }
+.recruitment-annotations.is-suppressed { visibility: hidden; pointer-events: none; }
+.recruitment-dock { position: absolute; z-index: 6; bottom: var(--recruitment-nav-space,150px); left: 0; right: 0; }
+.recruitment-dock-header { display: flex; align-items: center; justify-content: space-between; height: 42px; margin: 0 var(--gutter); }
+.recruitment-dock-header > p { font-size: 11px; letter-spacing: .09em; color: var(--note-body); }
+.recruitment-dock-controls { display: flex; align-items: center; gap: 4px; }
+.recruitment-dock-controls output { font-size: 10px; color: #56676f; min-width: 34px; text-align: center; font-variant-numeric: tabular-nums; }
+.recruitment-dock-controls button { width: 44px; height: 44px; font-size: 19px; color: var(--note-ink); border-radius: 50%; }
+.recruitment-dock-controls button:hover:enabled { background: #fff9; color: var(--note-accent); }
+.recruitment-dock-controls button:disabled { color: #a5afb3; cursor: default; }
+.recruitment-dock .annotation-tray { position: relative; display: flex; align-items: stretch; gap: 14px; padding: 2px var(--gutter) 14px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter); scrollbar-width: thin; scrollbar-color: #acb9bd transparent; pointer-events: auto; }
+.recruitment-dock .component-note { flex: 0 0 var(--annotation-width,320px); position: relative; top: auto; left: auto; scroll-snap-align: start; transition: none; box-shadow: 0 5px 14px #20384008; }
+.selection-work { margin: 13px 0 0; padding: 12px 0 0; border-top: 1px solid #70838b2b; list-style: none; display: grid; gap: 6px; font-size: 12px; line-height: 1.7; color: #344a55; }
+.selection-work li { padding-left: 11px; position: relative; }
+.selection-work li::before { content: ''; position: absolute; top: .7em; left: 0; width: 3px; height: 3px; background: var(--note-accent); }
+.showcase-info { max-width: 280px; }
+.showcase-info #selection-copy { font-size: 13px; line-height: 1.85; color: #4d616b; }
+.showcase-info #work-principle { color: #56676f; }
+.explorer[data-selection='operations'] .showcase-info { max-width: 320px; }
+@media (min-width:1051px) and (min-height:551px) {
+  .explorer:is([data-annotation-layout='orbit'],[data-annotation-layout='rail']) .showcase-info { max-width: none; display: grid; grid-template-columns: 280px minmax(280px,450px); gap: 3px 36px; align-items: start; }
+  .explorer:is([data-annotation-layout='orbit'],[data-annotation-layout='rail']) .showcase-info h2 { grid-row: 1 / 3; }
+  .explorer:is([data-annotation-layout='orbit'],[data-annotation-layout='rail']) .showcase-info #selection-copy { margin: 0; max-width: 450px; }
+  .explorer:is([data-annotation-layout='orbit'],[data-annotation-layout='rail']) .showcase-info #work-principle { grid-column: 2; margin-top: 0; font-size: 9px; line-height: 1.7; }
+}
+/* The renderer fills the viewport. Only the camera's subject framing makes room for text. */
+.showcase-sticky .ex-stage, .showcase-sticky #vehicle-canvas { inset: 0; }
+.showcase-sticky #vehicle-canvas canvas, .showcase-sticky .model-poster { mask-image: none; -webkit-mask-image: none; }
+.recruitment-dock { overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+.recruitment-dock[hidden], .selection-work[hidden] { display: none; }
+.showcase-sticky .condition-readout, .showcase-sticky .flow-legend { bottom: calc(var(--recruitment-nav-space,130px) + 4px); }
+.explorer[data-mode='system'][data-annotation-layout='none'] .showcase-info {
+  width: 290px; max-width: calc(100% - 2 * var(--gutter)); padding: 18px 20px;
+  background: linear-gradient(135deg,#ffffff47,var(--note-glass)); border: 1px solid var(--note-border); border-radius: 11px;
+  backdrop-filter: blur(40px) saturate(150%); -webkit-backdrop-filter: blur(40px) saturate(150%);
+  box-shadow: inset 0 1px 0 #ffffffa6; pointer-events: auto;
+}
+.explorer[data-annotation-layout='rail'][data-annotation-side='true'] .recruitment-dock { left: auto; right: var(--gutter); width: var(--annotation-width); top: calc(var(--header-height) + 18px); bottom: var(--recruitment-nav-space); }
+.explorer[data-annotation-side='true'] .recruitment-dock-header { margin: 0 8px; }
+.explorer[data-annotation-side='true'] .annotation-tray { padding: 2px 0 10px; scroll-padding-inline: 0; }
+.explorer[data-annotation-side='true'] .showcase-info { max-width: 46%; }
+.explorer[data-annotation-layout='rail'] .condition-readout, .explorer[data-annotation-layout='rail'] .flow-legend { display: none; }
+.component-note { text-shadow: 0 1px 6px #ffffff5c; }
+@media (max-width:1050px) {
+  .showcase-info { top: calc(var(--header-height) + 14px); max-width: 520px; }
+  .showcase-info #selection-copy { font-size: 12px; line-height: 1.65; }
+  .showcase-info #work-principle { font-size: 10px; line-height: 1.6; }
+}
+@media (max-width:650px) {
+  .showcase-info { top: calc(var(--header-height) + 8px); max-width: none; }
+  .showcase-info h2 { font-size: 24px; }
+  .showcase-info #selection-copy { font-size: 11px; margin-top: 5px; }
+  .showcase-info #work-principle { margin-top: 4px; font-size: 9px; }
+  .component-note { padding: 12px 16px; }
+  .component-note-system { font-size: 10px; margin-bottom: 3px; }
+  .component-note-title { font-size: 19px; }
+  .component-note-purpose { font-size: 12px; line-height: 1.65; margin-top: 6px; }
+  .component-note-work { margin-top: 8px; padding-top: 8px; }
+  .component-note-caption { display: none; }
+  .component-note-tasks { font-size: 11px; gap: 3px; }
+  .recruitment-dock-header { height: 32px; }
+  .recruitment-dock-controls button { width: 36px; height: 32px; }
+  .recruitment-dock .annotation-tray { padding-bottom: 6px; }
+  .department-buttons { display: flex; justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; gap: 0 22px; scrollbar-width: none; }
+  .department-buttons button { flex: 0 0 auto; }
+  .showcase-selectors { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; }
+  .group-buttons, .power-variants { flex-wrap: nowrap; flex: 0 0 auto; }
+  .showcase-hint-line #showcase-hint { display: none; }
+  .showcase-hint-line { justify-content: flex-end; min-height: 24px; }
+  #return-overview { min-height: 30px; }
+  .showcase-bottom { gap: 0; }
+  .explorer[data-mode='system'][data-annotation-layout='none'] .showcase-info { width: auto; padding: 12px 16px; }
+  .selection-work { margin-top: 8px; padding-top: 7px; gap: 3px; font-size: 11px; }
+}
+@media (min-width:651px) and (max-height:550px) {
+  .showcase-info { top: 64px; max-width: 46%; }
+  .showcase-info h2 { font-size: 21px; }
+  .showcase-info #selection-copy { font-size: 11px; }
+  .showcase-info #work-principle { font-size: 9px; }
+  .component-note { padding: 10px 14px; }
+  .component-note-title { font-size: 19px; }
+  .component-note-purpose, .component-note-tasks { font-size: 11px; }
+  .component-note-work { margin-top: 7px; padding-top: 7px; }
+  .component-note-caption { display: none; }
+  .showcase-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+  .department-buttons { justify-content: flex-start; gap: 0 16px; }
+  .showcase-selectors { justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .showcase-selectors .group-buttons, .showcase-selectors .power-variants { flex: 0 0 auto; flex-wrap: nowrap; }
+  .showcase-hint-line { display: none; }
+  .explorer[data-mode='system'][data-annotation-layout='none'] .showcase-info { width: 280px; max-height: calc(100svh - 134px); overflow: auto; padding: 12px 16px; }
+  .selection-work { font-size: 11px; gap: 3px; margin-top: 8px; padding-top: 8px; }
+}
+@media (max-width:650px) and (max-height:740px) {
+  .recruitment-dock-header { height: 28px; }
+  .recruitment-dock .component-note { padding: 8px 14px; }
+  .recruitment-dock .component-note-system, .recruitment-dock .component-note-purpose { display: none; }
+  .recruitment-dock .component-note-work { margin-top: 6px; padding-top: 6px; }
+  .recruitment-dock .component-note-tasks { line-height: 1.55; gap: 2px; }
+}
+@media (prefers-reduced-motion:reduce) { .component-note { transition: none; } }
+.reduce-motion .component-note { transition: none; }

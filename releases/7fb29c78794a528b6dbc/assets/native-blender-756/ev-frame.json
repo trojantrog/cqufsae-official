@@ -1,0 +1,149 @@
+{
+  "version": 756,
+  "vehicle": "DC26",
+  "presentationVehicle": "E74",
+  "units": "m",
+  "axes": "X front / Y left / Z up",
+  "binary": "ev-frame.bin",
+  "objects": [
+    {
+      "id": "dc26-actual-installed-frame",
+      "label": "DC26车架",
+      "sourceVariant": "dc26",
+      "variant": "e74",
+      "sourceNative": true,
+      "nativeContext": true,
+      "contextOnly": true,
+      "geometrySpace": "part-local-mm",
+      "sourceVertexUnits": "mm",
+      "units": "m",
+      "group": "frame",
+      "system": "electric-context",
+      "role": "ev-context-frame",
+      "contextRole": "ev-frame",
+      "material": "metal",
+      "presentationMaterial": "frame-graphite",
+      "materialId": "ev-mat-33ee24e3defc703e",
+      "nativeMaterialId": "ev-mat-33ee24e3defc703e",
+      "materialSlots": [
+        {
+          "slotIndex": 0,
+          "materialId": "ev-mat-33ee24e3defc703e"
+        }
+      ],
+      "cadColor": "#ffffff",
+      "appearanceBasis": "Neutral steel presentation finish from the current native file.",
+      "installationMatrix": [
+        -0.000999725099088096,
+        7.15035705528889e-25,
+        -2.344624177341192e-05,
+        0.0,
+        -9.522958012987715e-25,
+        -0.0010000000000000002,
+        1.5913299457567667e-23,
+        0.0,
+        -2.3446241773411918e-05,
+        7.087888336658888e-24,
+        0.0009997250990880957,
+        0.0,
+        -0.41849127869875447,
+        0.00011795852551599317,
+        0.082076639704172,
+        1.0
+      ],
+      "matrixOrder": "column-major",
+      "center": [
+        0.08771966841614515,
+        0.00011274001965660974,
+        0.5768987927777351
+      ],
+      "bounds": [
+        [
+          -0.9655261989864113,
+          -0.3317006449901091,
+          0.059299630893372354
+        ],
+        [
+          1.1409655358187016,
+          0.3319261250294223,
+          1.0944979546620979
+        ]
+      ],
+      "assembly": "dc26-installed-frame-context",
+      "stage": 2,
+      "assemblyOffset": [
+        0,
+        0,
+        0
+      ],
+      "detailOffset": [
+        0,
+        0,
+        0
+      ],
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "motionType": "fixed",
+      "surface": "native-stl-original-facet-normal",
+      "partCounted": false,
+      "includeInFocusFraming": false,
+      "excludeFromFocusFraming": true,
+      "focusOpacity": 0.22,
+      "focusRule": "0.22 * electricFocus; hidden in C41 and autonomous views",
+      "position": {
+        "byteOffset": 0,
+        "count": 298896,
+        "itemSize": 3,
+        "componentType": 5126
+      },
+      "normal": {
+        "byteOffset": 3586752,
+        "count": 298896,
+        "itemSize": 3,
+        "componentType": 5126
+      },
+      "index": {
+        "byteOffset": 7173504,
+        "count": 298896,
+        "itemSize": 1,
+        "componentType": 5125
+      }
+    }
+  ],
+  "triangles": 99632,
+  "independentParts": 1,
+  "contextOnly": true,
+  "source": {
+    "stl": "D:\\DeskTop\\fsae_cost\\generated\\whole_vehicle_aux_dc26_20261004\\material_meshes\\dc-frame-current__black_steel.stl",
+    "sha256": "ca2d65e5694eb5b9d5498e1e0ec2dc5620972a435f0f802e03022d8d047ff2cb",
+    "nativeCad": "D:\\DeskTop\\fsae_cost\\generated\\cad\\e74\\E74_Frame_surface.step",
+    "rawPositionSHA256": "101adb58b46daeec4ea65b93d8504700a71e7975a446ec53f06f215b55752bd4",
+    "proof": "D:\\DeskTop\\fsae_team_platform\\outputs\\c41-native-animation-20261017\\electric_frame_native_validation.json",
+    "registrationSources": {
+      "A": "D:\\DeskTop\\fsae_team_platform\\outputs\\c41-native-animation-20261017\\chassis-motion.json",
+      "R_744": "D:\\DeskTop\\fsae_team_platform\\outputs\\official-website-design-20261013\\revision-04\\research\\744-electric-web-evidence.json",
+      "B": "D:\\DeskTop\\fsae_cost\\generated\\成本报告打印册\\print_materials_all_systems_20261008\\rework_v2\\canonical-cover-scene\\DC26.json",
+      "W_current": "D:\\DeskTop\\fsae_cost\\generated\\成本报告打印册\\print_materials_all_systems_20261008\\rework_v2\\installed-cover-geometry.json"
+    }
+  },
+  "registration": {
+    "installationFormula": "R_744 @ inverse(B_old_to_current_mm) @ W_current_frame_mm",
+    "assemblyMatrixAlreadyApplied": false,
+    "requiresCommonAssemblyA": true,
+    "millimetreScaleInInstallationMatrix": 0.001,
+    "additionalVertexScale": 1.0,
+    "avoidDoubleTransform": "Keep raw mm positions; apply installationMatrix once under the common assembly A."
+  },
+  "visibility": {
+    "electric": 0.22,
+    "C41": 0.0,
+    "autonomous": 0.0,
+    "focusFraming": false,
+    "C41FrameDuringElectric": "Fade to zero; use this actual DC26 frame as EV installation context."
+  },
+  "binaryBytes": 8369088,
+  "binarySHA256": "00654854940c83cc84d8d74fddf56f4411e2ff899ccc24bf2abd4913908bec72"
+}
